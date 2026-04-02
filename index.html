@@ -1,1218 +1,982 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head><title>
-	无标题页
-</title>
+
+<head>
+    <title>
+        无标题页
+    </title>
     <link href="leavePublic.css" rel="stylesheet" type="text/css" />
     <link href="WorkFlow.css" rel="stylesheet" type="text/css" />
-<body  style="background-image: url('./leavebackImage.png')">
 
-<div class="documentBody">
-    <div class="DivTitle">&nbsp;<img src="arrow.gif">&nbsp;请假查询</div>
-            
+<body style="background-image: url('./leavebackImage.png')">
 
-<script>
-    $(function () {
-        $("body").on("click", ".get_more", function () {
-            $(this).prev(".info_more").toggle();
+    <div class="documentBody">
+        <div class="DivTitle">&nbsp;<img src="arrow.gif">&nbsp;请假查询</div>
 
-            $(this).children("i").toggleClass("fa-angle-double-down");
-            $(this).children("i").toggleClass("fa-angle-double-up");
-        })
-    })
-</script>
+        <table class="DivTable" cellpadding="3" cellspacing="1" border="0">
+            <tr align="left">
+                <td height="28" colspan="4" class="TitleTd">
+                    <strong>&nbsp;审核信息
+                    </strong>
+                </td>
+            </tr>
 
-<table class="DivTable" cellpadding="3" cellspacing="1" border="0">
-    <tr align="left">
-        <td height="28" colspan="4" class="TitleTd">
-            <strong>&nbsp;审核信息
-            </strong>
-        </td>
-    </tr>
+            <tr>
+                <td class="EdtTitleBack" style="width: 15%;">流程信息：</td>
+                <td class="EdtBack" colspan="3">
+                    <span id="LookExamInfo_NextStepMsg" style="color:Red;">流程审批通过</span>
+                    <input type="hidden" name="LookExamInfo$FormId" id="LookExamInfo_FormId"
+                        value="942203c1-c5c0-4037-8dbc-d6efd495d5ac" />
+                    <input type="hidden" name="LookExamInfo$TemplateId" id="LookExamInfo_TemplateId"
+                        value="d7b8c7d8-d202-496e-a9f6-b4f764016686" />
+                </td>
+            </tr>
+            <tr>
+                <td class="EdtTitleBack" style="width: 15%;">流程记录：</td>
+                <td class="EdtBack status" colspan="3">
+                    <span id="LookExamInfo_WorkflowInfo"><span class='sta_color2'>学生</span> -> <span
+                            class='sta_color2'>辅导员</span> -> <span class='sta_color2'>结束</span></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="EdtTitleBack" style="width: 15%;">审核步骤信息：</td>
+                <td class="EdtBack" colspan="3">
+                    <span id="LookExamInfo_ExamInfo" class="workflow">
+                        <div class='set_row'>
+                            <div>【2025-12-10】-【辅导员】-【审批通过】-【陈盈娇】同意</div>
+                            <div>【2025-12-10】-【学生】-【发起流程】-【杨瑞杰】杨瑞杰(202522061146)发起申请</div>
+                        </div>
+                    </span>
 
-    <tr>
-        <td class="EdtTitleBack" style="width: 15%;">流程信息：</td>
-        <td class="EdtBack" colspan="3">
-            <span id="LookExamInfo_NextStepMsg" style="color:Red;">流程审批通过</span>
-            <input type="hidden" name="LookExamInfo$FormId" id="LookExamInfo_FormId" value="942203c1-c5c0-4037-8dbc-d6efd495d5ac" />
-            <input type="hidden" name="LookExamInfo$TemplateId" id="LookExamInfo_TemplateId" value="d7b8c7d8-d202-496e-a9f6-b4f764016686" />
-        </td>
-    </tr>
-    <tr>
-        <td class="EdtTitleBack" style="width: 15%;">流程记录：</td>
-        <td class="EdtBack status" colspan="3">
-            <span id="LookExamInfo_WorkflowInfo"><span class='sta_color2'>学生</span> -> <span class='sta_color2'>辅导员</span> -> <span class='sta_color2'>结束</span></span>
-        </td>
-    </tr>
-    <tr>
-        <td class="EdtTitleBack" style="width: 15%;">审核步骤信息：</td>
-        <td class="EdtBack" colspan="3">
-            <span id="LookExamInfo_ExamInfo" class="workflow"><div class='set_row'><div>【2025-12-10】-【辅导员】-【审批通过】-【陈盈娇】同意</div><div>【2025-12-10】-【学生】-【发起流程】-【杨瑞杰】杨瑞杰(202522061146)发起申请</div></div></span>
+                </td>
+            </tr>
 
-        </td>
-    </tr>
-
-</table>
-
-            
-
-<table class="DivTable" cellpadding="3" style="background-image: url('./leavebackImage.png')" cellspacing="1" border="0">
-    <tr>
-        <td colspan="4" class="TitleTd">&nbsp;学生基础信息</td>
-    </tr>
-    <tr>
-        <td class="EdtTitleBack" style="width: 15%">学号：</td>
-        <td class="EdtBack" style="width: 35%">
-            <span id="Student1_StudentNo">202522061146</span></td>
-        <td class="EdtTitleBack" style="width: 15%">姓名：</td>
-        <td class="EdtBack">
-            <span id="Student1_Name">杨瑞杰(202522061146)</span></td>
-    </tr>
-    <tr>
-        <td class="EdtTitleBack">性别：</td>
-        <td class="EdtBack">
-            <span id="Student1_Sex">男</span></td>
-        <td class="EdtTitleBack">民族：</td>
-        <td class="EdtBack">
-            <span id="Student1_Nation">汉</span></td>
-    </tr>
-    <tr>
-        
-        <td class="EdtTitleBack">政治面貌：</td>
-        <td class="EdtBack">
-            <span id="Student1_Polity">共青团员</span></td>
-        <td class="EdtTitleBack">班级：</td>
-        <td class="EdtBack">
-            <span id="Student1_ClassName">2025工程造价2</span></td>
-    </tr>
-    <tr>
-        <td class="EdtTitleBack">年级：</td>
-        <td class="EdtBack">
-            <span id="Student1_speGrade">2025</span></td>
-        <td class="EdtTitleBack">专业：</td>
-        <td class="EdtBack">
-            <span id="Student1_speName">工程造价</span></td>
-    </tr>
-    <tr>
-        <td class="EdtTitleBack">学院：</td>
-        <td class="EdtBack">
-            <span id="Student1_CollegeName">建筑工程学院</span></td>
-        <td class="EdtTitleBack">联系电话：</td>
-        <td class="EdtBack" colspan="3">
-            <span id="Student1_MoveTel">16608388672</span></td>
-    </tr>
-</table>
-
-            
-<script src="../content/js/laydate/laydate.js"></script>
-
-<table class="DivTable" cellpadding="3" style="border-collapse: collapse;" cellspacing="0" border="0" onmousemove="getDateDiff();">
-    <tr>
-        <td colspan="4" class="TitleTd">&nbsp;请假信息
-        <span id="AllLeave1_LbStatus" style="color: #FF0000">请假状态：已销假</span>
-            
-        </td>
-    </tr>
-    <tr id="TimePanel" onmousemove="getDateDiff();">
-        <td class="EdtTitleBack">请假时间：</td>
-        <td colspan="3" class="EdtBack">
-            <input name="AllLeave1$LeaveBeginDate" type="text" value="2025-12-10" id="AllLeave1_LeaveBeginDate" placeholder="请输入日期" class="laydate-icon" onclick="laydate()" style="width:90px;" />
-            <span style="color: red;">*</span>
-            <span id="AllLeave1_RequiredFieldValidator1" style="color:Red;display:none;">必填</span>
-            <select name="AllLeave1$LeaveBeginTime" id="AllLeave1_LeaveBeginTime">
-	<option value="00">00点</option>
-	<option value="01">01点</option>
-	<option value="02">02点</option>
-	<option value="03">03点</option>
-	<option value="04">04点</option>
-	<option value="05">05点</option>
-	<option value="06">06点</option>
-	<option value="07">07点</option>
-	<option value="08">08点</option>
-	<option value="09">09点</option>
-	<option value="10">10点</option>
-	<option value="11">11点</option>
-	<option value="12">12点</option>
-	<option value="13">13点</option>
-	<option value="14">14点</option>
-	<option value="15">15点</option>
-	<option value="16">16点</option>
-	<option value="17">17点</option>
-	<option value="18">18点</option>
-	<option selected="selected" value="19">19点</option>
-	<option value="20">20点</option>
-	<option value="21">21点</option>
-	<option value="22">22点</option>
-	<option value="23">23点</option>
-</select>
-            <select name="AllLeave1$LeaveBeginMinute" id="AllLeave1_LeaveBeginMinute">
-	<option value="00">00分</option>
-	<option value="01">01分</option>
-	<option value="02">02分</option>
-	<option value="03">03分</option>
-	<option value="04">04分</option>
-	<option value="05">05分</option>
-	<option value="06">06分</option>
-	<option value="07">07分</option>
-	<option value="08">08分</option>
-	<option value="09">09分</option>
-	<option value="10">10分</option>
-	<option value="11">11分</option>
-	<option value="12">12分</option>
-	<option value="13">13分</option>
-	<option value="14">14分</option>
-	<option value="15">15分</option>
-	<option value="16">16分</option>
-	<option value="17">17分</option>
-	<option value="18">18分</option>
-	<option value="19">19分</option>
-	<option value="20">20分</option>
-	<option value="21">21分</option>
-	<option value="22">22分</option>
-	<option value="23">23分</option>
-	<option value="24">24分</option>
-	<option value="25">25分</option>
-	<option value="26">26分</option>
-	<option value="27">27分</option>
-	<option value="28">28分</option>
-	<option value="29">29分</option>
-	<option value="30">30分</option>
-	<option value="31">31分</option>
-	<option value="32">32分</option>
-	<option value="33">33分</option>
-	<option value="34">34分</option>
-	<option value="35">35分</option>
-	<option value="36">36分</option>
-	<option value="37">37分</option>
-	<option value="38">38分</option>
-	<option value="39">39分</option>
-	<option selected="selected" value="40">40分</option>
-	<option value="41">41分</option>
-	<option value="42">42分</option>
-	<option value="43">43分</option>
-	<option value="44">44分</option>
-	<option value="45">45分</option>
-	<option value="46">46分</option>
-	<option value="47">47分</option>
-	<option value="48">48分</option>
-	<option value="49">49分</option>
-	<option value="50">50分</option>
-	<option value="51">51分</option>
-	<option value="52">52分</option>
-	<option value="53">53分</option>
-	<option value="54">54分</option>
-	<option value="55">55分</option>
-	<option value="56">56分</option>
-	<option value="57">57分</option>
-	<option value="58">58分</option>
-	<option value="59">59分</option>
-</select>
-            至<input name="AllLeave1$LeaveEndDate" type="text" value="2025-12-10" id="AllLeave1_LeaveEndDate" placeholder="请输入日期" class="laydate-icon" onclick="laydate()" style="width:90px;" />
-            <span style="color: red;">*</span>
-            <span id="AllLeave1_RequiredFieldValidator5" style="color:Red;display:none;">必填</span>
-            <select name="AllLeave1$LeaveEndTime" id="AllLeave1_LeaveEndTime">
-	<option value="00">00点</option>
-	<option value="01">01点</option>
-	<option value="02">02点</option>
-	<option value="03">03点</option>
-	<option value="04">04点</option>
-	<option value="05">05点</option>
-	<option value="06">06点</option>
-	<option value="07">07点</option>
-	<option value="08">08点</option>
-	<option value="09">09点</option>
-	<option value="10">10点</option>
-	<option value="11">11点</option>
-	<option value="12">12点</option>
-	<option value="13">13点</option>
-	<option value="14">14点</option>
-	<option value="15">15点</option>
-	<option value="16">16点</option>
-	<option value="17">17点</option>
-	<option value="18">18点</option>
-	<option value="19">19点</option>
-	<option value="20">20点</option>
-	<option selected="selected" value="21">21点</option>
-	<option value="22">22点</option>
-	<option value="23">23点</option>
-</select>
-            <select name="AllLeave1$LeaveEndMinute" id="AllLeave1_LeaveEndMinute">
-	<option value="00">00分</option>
-	<option value="01">01分</option>
-	<option value="02">02分</option>
-	<option value="03">03分</option>
-	<option value="04">04分</option>
-	<option value="05">05分</option>
-	<option value="06">06分</option>
-	<option value="07">07分</option>
-	<option value="08">08分</option>
-	<option value="09">09分</option>
-	<option value="10">10分</option>
-	<option value="11">11分</option>
-	<option value="12">12分</option>
-	<option value="13">13分</option>
-	<option value="14">14分</option>
-	<option value="15">15分</option>
-	<option value="16">16分</option>
-	<option value="17">17分</option>
-	<option value="18">18分</option>
-	<option value="19">19分</option>
-	<option selected="selected" value="20">20分</option>
-	<option value="21">21分</option>
-	<option value="22">22分</option>
-	<option value="23">23分</option>
-	<option value="24">24分</option>
-	<option value="25">25分</option>
-	<option value="26">26分</option>
-	<option value="27">27分</option>
-	<option value="28">28分</option>
-	<option value="29">29分</option>
-	<option value="30">30分</option>
-	<option value="31">31分</option>
-	<option value="32">32分</option>
-	<option value="33">33分</option>
-	<option value="34">34分</option>
-	<option value="35">35分</option>
-	<option value="36">36分</option>
-	<option value="37">37分</option>
-	<option value="38">38分</option>
-	<option value="39">39分</option>
-	<option value="40">40分</option>
-	<option value="41">41分</option>
-	<option value="42">42分</option>
-	<option value="43">43分</option>
-	<option value="44">44分</option>
-	<option value="45">45分</option>
-	<option value="46">46分</option>
-	<option value="47">47分</option>
-	<option value="48">48分</option>
-	<option value="49">49分</option>
-	<option value="50">50分</option>
-	<option value="51">51分</option>
-	<option value="52">52分</option>
-	<option value="53">53分</option>
-	<option value="54">54分</option>
-	<option value="55">55分</option>
-	<option value="56">56分</option>
-	<option value="57">57分</option>
-	<option value="58">58分</option>
-	<option value="59">59分</option>
-</select>
-            共计
-      <input name="AllLeave1$LeaveDay" type="text" id="AllLeave1_LeaveDay" style="width: 45px; border-top-style: none; border-right-style: none; border-left-style: none; text-align: center; border-bottom-style: none;" maxlength="2" readonly="readOnly" />
-            天
-      <input name="AllLeave1$LeaveHour" type="text" id="AllLeave1_LeaveHour" style="width: 45px; border-top-style: none; border-right-style: none; border-left-style: none; text-align: center; border-bottom-style: none;" maxlength="2" readonly="readOnly" value="1" />
-            小时
-   <input name="AllLeave1$LeaveMinute" type="text" id="AllLeave1_LeaveMinute" style="width: 35px; border-top-style: none; border-right-style: none; border-left-style: none; text-align: center; border-bottom-style: none;" maxlength="2" readonly="readOnly" value="40" />
-            分
-            
-        </td>
-    </tr>
-    <tr>
-        <td class="EdtTitleBack">请假事由类型：</td>
-        <td colspan="3" class="EdtBack">
-            <span id="AllLeave1_LeaveType"><input id="AllLeave1_LeaveType_0" type="radio" name="AllLeave1$LeaveType" value="02048001" /><label for="AllLeave1_LeaveType_0">求职</label><input id="AllLeave1_LeaveType_1" type="radio" name="AllLeave1$LeaveType" value="02048002" /><label for="AllLeave1_LeaveType_1">实习</label><input id="AllLeave1_LeaveType_2" type="radio" name="AllLeave1$LeaveType" value="02048003" /><label for="AllLeave1_LeaveType_2">返家</label><input id="AllLeave1_LeaveType_3" type="radio" name="AllLeave1$LeaveType" value="02048004" /><label for="AllLeave1_LeaveType_3">培训</label><input id="AllLeave1_LeaveType_4" type="radio" name="AllLeave1$LeaveType" value="02048005" /><label for="AllLeave1_LeaveType_4">旅游</label><input id="AllLeave1_LeaveType_5" type="radio" name="AllLeave1$LeaveType" value="02048006" /><label for="AllLeave1_LeaveType_5">病假</label><input id="AllLeave1_LeaveType_6" type="radio" name="AllLeave1$LeaveType" value="02048007" checked="checked" /><label for="AllLeave1_LeaveType_6">事假</label><input id="AllLeave1_LeaveType_7" type="radio" name="AllLeave1$LeaveType" value="02048008" /><label for="AllLeave1_LeaveType_7">公假</label><input id="AllLeave1_LeaveType_8" type="radio" name="AllLeave1$LeaveType" value="02048009" /><label for="AllLeave1_LeaveType_8">社会实践</label></span>
-            <span style="color: red;">*</span>
-            <span id="AllLeave1_RequiredFieldValidator3" style="color:Red;display:none;">必填</span>
-        </td>
-    </tr>
-    <tr>
-        <td class="EdtTitleBack">事由说明：</td>
-        <td class="EdtBack" colspan="3">
-            <textarea name="AllLeave1$LeaveThing" id="AllLeave1_LeaveThing" style="width: 90%; height: 90px" maxlength="500">有事</textarea>
-            <span style="color: red;">*</span>
-            <span id="AllLeave1_RequiredFieldValidatorlt" style="color:Red;display:none;">必填</span>
-        </td>
-    </tr>
-    <tr>
-        <td class="EdtTitleBack" style="width: 15%">外出地点：</td>
-        <td class="EdtBack" style="width: 35%">
-            <input name="AllLeave1$OutAddress" type="text" id="AllLeave1_OutAddress" style="width: 50%" maxlength="50" onblur="sa()" value="学校周边" />
-            <span style="color: red;">*</span>
-            <span id="AllLeave1_RequiredFieldValidator2" style="color:Red;display:none;">必填</span>
-        </td>
-        <td class="EdtTitleBack" style="width: 15%">同行人数：</td>
-        <td class="EdtBack">
-            <select name="AllLeave1$WithNumNo" id="AllLeave1_WithNumNo">
-	<option selected="selected" value="0">0人</option>
-	<option value="1">1人</option>
-	<option value="2">2人</option>
-	<option value="3">3人</option>
-	<option value="4">4人</option>
-	<option value="5">5人</option>
-	<option value="6">6人</option>
-	<option value="7">7人</option>
-	<option value="8">8人</option>
-	<option value="9">9人</option>
-	<option value="10">10人</option>
-	<option value="11">11人</option>
-	<option value="12">12人</option>
-	<option value="13">13人</option>
-	<option value="14">14人</option>
-	<option value="15">15人</option>
-	<option value="16">16人</option>
-	<option value="17">17人</option>
-	<option value="18">18人</option>
-	<option value="19">19人</option>
-	<option value="20">20人</option>
-	<option value="21">21人</option>
-	<option value="22">22人</option>
-	<option value="23">23人</option>
-	<option value="24">24人</option>
-	<option value="25">25人</option>
-	<option value="26">26人</option>
-	<option value="27">27人</option>
-	<option value="28">28人</option>
-	<option value="29">29人</option>
-	<option value="30">30人</option>
-</select>
-        </td>
-    </tr>
-    <tr>
-        <td class="EdtTitleBack" style="width: 15%">学生提交时间：</td>
-        <td class="EdtBack" style="width: 35%">
-            <input name="AllLeave1$InputDate" type="text" value="2025-12-10" id="AllLeave1_InputDate" placeholder="请输入日期" class="laydate-icon" onclick="laydate()" style="width:90px;" />
-        </td>
-        <td class="EdtTitleBack" style="width: 15%">是否外宿</td>
-        <td class="EdtBack">
-            <span id="AllLeave1_IfOut" class="JTGJ"><input id="AllLeave1_IfOut_0" type="radio" name="AllLeave1$IfOut" value="1" /><label for="AllLeave1_IfOut_0">是</label><input id="AllLeave1_IfOut_1" type="radio" name="AllLeave1$IfOut" value="0" checked="checked" /><label for="AllLeave1_IfOut_1">否</label></span>
-            <span style="color: red;">*</span>
-            <span id="AllLeave1_RequiredFieldValidator8" style="color:Red;display:none;">必填</span>
-        </td>
-    </tr>
-    <tr>
-        <td class="EdtTitleBack">&nbsp;附件</td>
-        <td colspan="3" class="EdtBack">
-            <div style="position: relative;">
-    <div id="AllLeave1_MutiFileUpload_MsgVisible" style="display:none;">
-    &nbsp;&nbsp;(<font color="#ff0000"><font face="宋体">存在文件必须填写说明，<font style="color: red">附件类型包括：.jpg,.jpeg,.gif,.png,.bmp,.doc,.docx,.rar,.pdf,.xls,.xlsx,文件大小在20M之内</font></font></font>)<br />
-    文件：<input type="file" name="AllLeave1$MutiFileUpload$SendFile" id="AllLeave1_MutiFileUpload_SendFile" onchange="getFileName(this);" /><img id="AllLeave1_MutiFileUpload_tempimg" dynsrc="" style="display: none" />&nbsp;&nbsp;文件名：
-                                    <input name="AllLeave1$MutiFileUpload$AddressThing" type="text" id="AllLeave1_MutiFileUpload_AddressThing" style="width:234px;" />
-    &nbsp;<input type="submit" name="AllLeave1$MutiFileUpload$BtnSend" value="上传附件" id="AllLeave1_MutiFileUpload_BtnSend" disabled="disabled" /><br />
-        </div>
-    <input name="AllLeave1$MutiFileUpload$TextBox1" type="text" id="AllLeave1_MutiFileUpload_TextBox1" class="locationfoces" style="width:0px;display:none" />
-    <table width="80%">
-        <tr>
-            <td>
-                
-                <a id="AllLeave1_MutiFileUpload_HyperLink1"></a>
-            </td>
-        </tr>
-    </table>
-</div>
-<style>
-    .locationfoces {
-        position: absolute;
-        top: 130px;
-        z-index: -1;
-    }
-</style>
-<input type="hidden" name="AllLeave1$MutiFileUpload$SystemIdHf" id="AllLeave1_MutiFileUpload_SystemIdHf" value="e52a5c79-ee85-4b61-b6eb-fa1bf661a9f0" />
-<input name="AllLeave1$MutiFileUpload$Flag" type="hidden" id="AllLeave1_MutiFileUpload_Flag" value="0" />
-<input name="AllLeave1$MutiFileUpload$fn" type="hidden" id="AllLeave1_MutiFileUpload_fn" />
-<input name="AllLeave1$MutiFileUpload$swf" type="hidden" id="AllLeave1_MutiFileUpload_swf" />
-<input name="AllLeave1$MutiFileUpload$opentype" type="hidden" id="AllLeave1_MutiFileUpload_opentype" value="1" />
-<div id="overlay"></div>
-<script src="../Content/js/jQueryRotate.js"></script>
-<script type="text/javascript">
-    var angle=0;
-    var bl = 0;
-    var zbl = 0.2;//扩大或者缩小比率间隔
-    var maxsize_=20;
-    var maxsize = parseInt(maxsize_) * 1024 * 1024;//20M
-    var errMsg = "上传的附件文件不能超过"+maxsize_+"M！！！";
-    var tipMsg = "您的浏览器暂不支持计算上传文件的大小，确保上传文件不要超过"+maxsize_+"M，建议使用IE、FireFox、Chrome浏览器。";
-    var browserCfg = {};
-    var ua = window.navigator.userAgent;
-    if (ua.indexOf("MSIE") >= 1) {
-        browserCfg.ie = true;
-    } else if (ua.indexOf("Firefox") >= 1) {
-        browserCfg.firefox = true;
-    } else if (ua.indexOf("Chrome") >= 1) {
-        browserCfg.chrome = true;
-    } else if (!!window.ActiveXObject || "ActiveXObject" in window) {
-        browserCfg.ie = true;
-    }
-    function checkfile(obj) {
-        try {
-            var colidname=$(obj).attr("id").replace("BtnSend","");
-            var obj_file = document.getElementById(colidname+"SendFile");
-            var obj_fileName = document.getElementById(colidname+"AddressThing");
-            //alert(obj_file.value);
-            if (obj_file.value == "") {
-                layer.alert("请先选择上传文件", { icon: 5 });
-                return false;
-            }
-            if (obj_fileName.value == "") {
-                layer.alert("文件名不能为空", { icon: 5 });
-                return false;
-            }
-            var filesize = 0;
-            if (browserCfg.firefox || browserCfg.chrome) {
-                filesize = obj_file.files[0].size;
-            } else if (browserCfg.ie) {
-                var obj_img = document.getElementById(colidname+'tempimg');
-                obj_img.dynsrc = obj_file.value;
-                filesize = obj_img.fileSize;
-            } else {
-                layer.alert(tipMsg, { icon: 0 });
-                obj_file.value = "";
-                obj_fileName.value = "";
-                return false;
-            }
-            if (filesize == -1) {
-                layer.alert(tipMsg, { icon: 0 });
-                obj_file.value = "";
-                obj_fileName.value = "";
-                return false;
-            } else if (filesize > maxsize) {
-                layer.alert(errMsg, { icon: 2 });
-                obj_file.value = "";
-                obj_fileName.value = "";
-                return false;
-            } else if (typeof (filesize) == "undefined") {
-                obj_file.value = "";
-                obj_fileName.value = "";
-                return false;
-            } else {
-                return true;
-            }
-        } catch (e) {
-            layer.alert(e, { icon: 2 });
-            obj_file.value = "";
-            obj_fileName.value = "";
-            return false;
-        }
-    }
-    function getFileName(obj) {
-        try {
-            var colidname1=$(obj).attr("id");
-            var obj_file = document.getElementById(colidname1);
-            if (obj_file.value == "") {
-                layer.alert("请先选择上传文件", { icon: 5 });
-                return;
-            }
-            var filesize = 0;
-            if (browserCfg.firefox || browserCfg.chrome) {
-                filesize = obj_file.files[0].size;
-            } else if (browserCfg.ie) {
-                var obj_img = document.getElementById(colidname+'tempimg');
-                obj_img.dynsrc = obj_file.value;
-                filesize = obj_img.fileSize;
-            } else {
-                layer.alert(tipMsg, { icon: 0 });
-                obj_file.value = "";
-                return;
-            }
-            if (filesize == -1) {
-                layer.alert(tipMsg, { icon: 0 });
-                obj_file.value = "";
-                return;
-            } else if (filesize > maxsize) {
-                layer.alert(errMsg, { icon: 2 });
-                obj_file.value = "";
-                return;
-            } else if (typeof (filesize) == "undefined") {
-                obj_file.value = "";
-                return;
-            }
-        } catch (e) {
-            layer.alert(e, { icon: 2 });
-            obj_file.value = "";
-            return;
-        }
-        var colidname=$(obj).attr("id").replace("SendFile","");
-        var path = $("#"+colidname+"SendFile").val();
-        var pos1 = path.lastIndexOf("\\");
-        var pos2 = path.lastIndexOf(".");
-        var pos = path.substring(pos1 + 1, pos2);
-        document.getElementById(colidname+"AddressThing").value = path.substring(pos1 + 1, pos2);
-    }
-    //jQuery.noConflict();
-    //jQuery(document).ready(function () {
-    //    jQuery(".Prev_imgDiv").bind("click", function () {
-    //        alert('x');
-    //    })
-    //});
-
-    function ChangeCurrPage(obj) {
-        var i = jQuery(obj).id;
-        $("#"+AllLeave1_MutiFileUpload+"_CurrPage1").val(i.substring(1));
-        event.stopPropagation();
-    }
-
-    function ChangeCurrPage1(obj)
-    {
-        var i = obj.id;
-        $("#"+AllLeave1_MutiFileUpload+"_CurrPage1").val(i);
-        event.stopPropagation();
-    }
-
-    /*确定文档总页数 by ljy */
-    function AllLeave1_MutiFileUpload_loadTotalPage1(filename, totalpage, swf,sourcefilename) {
-        var colidname='AllLeave1_MutiFileUpload';
-        var yuname = "http://xsc.scetc.edu.cn/ScetcXG/WebDown/";
-        $("#"+'AllLeave1_MutiFileUpload'+"_fn").val(filename);
-        $("#"+'AllLeave1_MutiFileUpload'+"_swf").val(swf);
-        var opentype=$("#"+'AllLeave1_MutiFileUpload'+"_opentype").val();
-        if(opentype=="2")
-        {
-            window.open("../Public/MutiFileUpload_ShowPic.aspx?fn="+filename+"&tp="+totalpage+"&swf="+swf+"&sourcefilename="+escape(sourcefilename),"newWindow","menubar=0,scrollbars=1, resizable=1,status=1,titlebar=0,toolbar=0,location=1");
-            return;
-        }
-        var nextpagehtml = "";
-        if (totalpage > 1)
-            nextpagehtml = "<div style='width:100%;height:20px;background-color:#fff;background-image:url(../images/BJ.PNG)' id='"+'AllLeave1_MutiFileUpload'+"_nextpage'><a href='javascript:loadNextPage()' class='nextPage'><font style='color:#000'>点击查看下一页</font></a></div>";
-        var Html = "<div id='"+'AllLeave1_MutiFileUpload'+"_SelectedPanel'>"
-            +"<table class='DivTable' style='width:100%'>"
-                                                            + "<tr class='EdtTitleBack'><td style='text-align:center' colspan='2'><div style='width:100%;height:100%;min-height:320px;max-height:100%;'><div class='mainPage' id='"+'AllLeave1_MutiFileUpload'+"_mainPage' style='width:100%;overflow-y:scroll;min-height:300px' ><div class='Prev_imgDiv' id='"+'AllLeave1_MutiFileUpload'+"_P1' onmouseover='ChangeCurrPage(this);'><img src='../../LoginImg/西科大二期功能需求V1.0_001.Png' id='"+'AllLeave1_MutiFileUpload'+"_1'/></div></div>"
-                                                            + nextpagehtml + "</div></td></tr></table></div>";
-        var title = "<div style='width:100%;poistion:fixed;height:30px;color:#000'>文档在线预览（<font color=red>目前仅支持WORD,PDF,图片等</font>）当前第<input id='"+'AllLeave1_MutiFileUpload'+"_CurrPage1' type='text' value='1' style='border:0px;width:20px;text-align:center' disabled /> 页, 已加载到第 <input id='"+'AllLeave1_MutiFileUpload'+"_CurrPage' type='text' value='1' style='border:0px;width:20px;text-align:center' disabled /> 页，共 <input id='"+'AllLeave1_MutiFileUpload'+"_TotalPage' type='text' value='" + totalpage + "' style='border:0px;width:20px;text-align:center' disabled /> 页  <span style='margin-right:12px;right:0px;float:right'>文件名：" + sourcefilename + "</span></div>";
-        $("#"+'AllLeave1_MutiFileUpload'+"_TotalPage").val(totalpage);
-        layer.open({
-            type: 1,
-            title: title,
-            area: ['100%', '100%'],
-            fix: false, //不固定
-            maxmin: false,
-            //skin: 'layui-layer-rim', //加上边框
-            shadeClose: false,
-            closeBtn: 1,
-            content: Html,
-            scrolling:'no',
-            btn: ['逆时针旋转','顺时针旋转','图片放大','图片缩小'],
-            btnAlign: 'c',
-            btn1: function(){
-                var tmpangle=angle;
-                $('.mainPage img').rotate(tmpangle-90);
-                angle=tmpangle-90;
-                LayerConfirm(this);
-                return false;
-            },
-            btn2: function(){
-                var tmpangle=angle;
-                $('.mainPage img').rotate(tmpangle+90);
-                angle=tmpangle+90;  
-                LayerConfirm(this);
-                return false;
-            },
-            btn3: function () {
-                
-                $("<img/>").attr("src", $('.mainPage img').attr("src")).load(function () {
-                    /*
-                      如果要获取图片的真实的宽度和高度有三点必须注意
-                      1、需要创建一个image对象：如这里的$("<img/>")
-                      2、指定图片的src路径
-                      3、一定要在图片加载完成后执行如.load()函数里执行
-                     */
-                    realWidth = this.width;
-                    realHeight = this.height;
-                    //alert(realWidth + "|" + realHeight);
-                    var tmpwidth = realWidth*(1+bl+zbl);
-                    var tmpheight = realHeight * (1+bl+zbl);
-                    var xwidth = $('.mainPage img').attr("width");
-                    var xheight = $('.mainPage img').attr("height");
-                    if (typeof xwidth !== typeof undefined && xwidth !== false) {
-                        $('.mainPage img').attr("width", parseInt(tmpwidth));
-                    }
-                    else
-                    {
-                        $('.mainPage img').attr("width", parseInt(tmpwidth));
-                    }
-
-                    if (typeof xheight !== typeof undefined && xheight !== false) {
-                        $('.mainPage img').attr("height", parseInt(tmpheight));
-                    }
-                    else
-                    {
-                        $('.mainPage img').attr("height", parseInt(tmpheight));
-                    }
-                    bl += zbl;
-                    //alert(tmpwidth + "|" + tmpheight);
-                    LayerConfirm(this);
-                    return false;
-                });
-                LayerConfirm(this);
-                return false;
-            },
-            btn4: function(){
-                $("<img/>").attr("src", $('.mainPage img').attr("src")).load(function () {
-                    /*
-                      如果要获取图片的真实的宽度和高度有三点必须注意
-                      1、需要创建一个image对象：如这里的$("<img/>")
-                      2、指定图片的src路径
-                      3、一定要在图片加载完成后执行如.load()函数里执行
-                     */
-                    realWidth = this.width;
-                    realHeight = this.height;
-                    //alert(realWidth + "|" + realHeight);
-                    var tmpwidth = realWidth*(1+bl-zbl);
-                    var tmpheight = realHeight * (1+bl-zbl);
-                    var xwidth = $('.mainPage img').attr("width");
-                    var xheight = $('.mainPage img').attr("height");
-                    if (typeof xwidth !== typeof undefined && xwidth !== false) {
-                        $('.mainPage img').attr("width", parseInt(tmpwidth));
-                    }
-                    else
-                    {
-                        $('.mainPage img').attr("width", parseInt(tmpwidth));
-                    }
-
-                    if (typeof xheight !== typeof undefined && xheight !== false) {
-                        $('.mainPage img').attr("height", parseInt(tmpheight));
-                    }
-                    else
-                    {
-                        $('.mainPage img').attr("height", parseInt(tmpheight));
-                    }
-                    bl -= zbl;
-                    //alert(tmpwidth + "|" + tmpheight);
-                    LayerConfirm(this);
-                    return false;
-                });
-                LayerConfirm(this);
-                return false;
-            }
-        });
-        if (swf.toLowerCase() == ".jpg"|| swf.toLowerCase() == ".jpeg"  || swf.toLowerCase() == ".png" || swf.toLowerCase() == ".gif" || swf.toLowerCase() == ".bmp") {
-            var FolderNameInt = filename.indexOf('-');
-            var newfn = filename.replace("-", "\\");
-            $("#"+'AllLeave1_MutiFileUpload'+"_1").attr("src", yuname+newfn);
-        }
-        else {
-            var FolderNameInt = filename.indexOf('-');
-            var newfn = filename.replace("-", "\\");
-            var ext = swf;
-            if (swf.toLowerCase() == ".docx" || swf.toLowerCase() == ".doc" || swf.toLowerCase() == ".pdf" || swf.toLowerCase() == ".rar") {
-                var fileHead = newfn.substring(FolderNameInt + 1, newfn.indexOf(ext));
-                $("#"+'AllLeave1_MutiFileUpload'+"_1").attr("src", yuname + "Preview/" + fileHead + "_001.Png").attr("onmouseover", "ChangeCurrPage1(this);");
-            }
-            else {
-                $("#"+'AllLeave1_MutiFileUpload'+"_1").attr("src", "../../LoginImg/noShow_001.Png");
-                alert('当前文件暂不支持预览！');
-            }
-        }
-    }
-
-    function loadNextPage()
-    { 
-        angle=0;
-        var yuname="http://xsc.scetc.edu.cn/ScetcXG/WebDown/";
-        var FolderNameInt = $("#"+'AllLeave1_MutiFileUpload'+"_fn").val().indexOf('-');
-        var newfn = $("#"+'AllLeave1_MutiFileUpload'+"_fn").val().replace("-", "\\");
-        var ext = $("#"+'AllLeave1_MutiFileUpload'+"_swf").val();
-        var fileHead = newfn.substring(FolderNameInt+1, newfn.indexOf(ext));
-        var currPage = $("#"+'AllLeave1_MutiFileUpload'+"_CurrPage").val();
-        var totalPage = $("#"+'AllLeave1_MutiFileUpload'+"_TotalPage").val();
-        if (parseInt(currPage) < parseInt(totalPage))
-        {
-            var newcurrPage = parseInt(currPage.replace(""+'AllLeave1_MutiFileUpload'+"_","")) + 1;
-            var newcurrPageStr = newcurrPage;
-            if (newcurrPage < 10)
-                newcurrPageStr = "00" + newcurrPage;
-            if (newcurrPage < 100 && newcurrPage > 9)
-                newcurrPageStr = "0" + newcurrPage;
-            if (newcurrPage < 1000 && newcurrPage > 99)
-                newcurrPageStr = newcurrPage;
-            $("#"+'AllLeave1_MutiFileUpload'+"_mainPage").append("<div id='"+'AllLeave1_MutiFileUpload'+"_" + newcurrPage + "_1' style='background-color:#f0f0f0;width:100%;height:20px'></div><div class='Prev_imgDiv' ID='P" + newcurrPage + "' onmouseover='ChangeCurrPage(this);'><img src=\"" + yuname + "Preview/" + fileHead + "_" + newcurrPageStr + ".Png\" id='"+'AllLeave1_MutiFileUpload'+"_" + newcurrPage + "' onmouseover='ChangeCurrPage1(this);' /><div>");
-            location.href = '#'+'AllLeave1_MutiFileUpload'+"_"+newcurrPage;
-            $("#"+'AllLeave1_MutiFileUpload'+"_CurrPage").val(newcurrPage);
-            if (parseInt(newcurrPage) == parseInt(totalPage)) {
-                $("#"+'AllLeave1_MutiFileUpload'+"_nextpage").attr("style", "display:none");
-            }
-        }
-        else
-        {
-            alert('当前页已经是最后一页了');
-        }
-    }
-</script>
-<style type="text/css">
-    .Prev_imgDiv {
-        width: 100%;
-        background-color: #808080;
-        /*background-image:url(../images/BJ.PNG);*/
-    }
-
-    a .nextPage {
-        color: #fff;
-        font-weight: 900;
-    }
-    .layui-layer-btn {
-        text-align:center
-    }
-</style>
+        </table>
 
 
-        </td>
-    </tr>
-    
-    
-    <tr>
-        <td colspan="4" class="TitleTd">&nbsp;外出联系人信息</td>
-    </tr>
-    <tr>
-        <td class="EdtTitleBack">固定电话：</td>
-        <td class="EdtBack">
-            <input name="AllLeave1$OutTel" type="text" id="AllLeave1_OutTel" style="width: 115px" maxlength="13" />
-            <span id="AllLeave1_RegularExpressionValidator1" style="color:Red;display:none;">格式：区号+号码</span>
-        </td>
-        <td class="EdtTitleBack">移动电话：</td>
-        <td class="EdtBack">
-            <input name="AllLeave1$OutMoveTel" type="text" id="AllLeave1_OutMoveTel" style="width: 115px" maxlength="11" value="15082021157" />
-            <span style="color: red">*</span>
-            <span id="AllLeave1_RequiredFieldValidator9" style="color:Red;display:none;">必填</span>
-            <span id="AllLeave1_RegularExpressionValidator2" style="color:Red;display:none;">请输入以1开头的11位数字</span>
-        </td>
-    </tr>
-    <tr>
-        <td class="EdtTitleBack">与本人关系：</td>
-        <td class="EdtBack">
-            <input name="AllLeave1$Relation" type="text" id="AllLeave1_Relation" style="width: 115px" maxlength="20" value="父子" />
-            <span style="color: red">*</span>
-            <span id="AllLeave1_RequiredFieldValidator7" style="color:Red;display:none;">必填</span>
-        </td>
-        <td class="EdtTitleBack">联系人姓名：</td>
-        <td class="EdtBack">
-            <input name="AllLeave1$OutName" type="text" id="AllLeave1_OutName" style="width: 115px" maxlength="20" value="杨宗辉" />
-            <span style="color: red">*</span>
-            <span id="AllLeave1_RequiredFieldValidator10" style="color:Red;display:none;">必填</span>
-        </td>
-    </tr>
-    <tr>
-        <td class="EdtTitleBack">家长联系人：</td>
-        <td class="EdtBack">
-            <input name="AllLeave1$JHRName" type="text" id="AllLeave1_JHRName" style="width: 115px" maxlength="15" value="杨宗辉" />
-            <span style="color: red">*</span>
-            <span id="AllLeave1_RequiredFieldValidator4" style="color:Red;display:none;">必填</span>
-        </td>
-        <td class="EdtTitleBack">家长联系方式：</td>
-        <td class="EdtBack">
-            <input name="AllLeave1$JHRPhone" type="text" id="AllLeave1_JHRPhone" style="width: 115px" maxlength="13" value="15082021157" />
-            <span style="color: red">*</span>
-            <span id="AllLeave1_RequiredFieldValidator6" style="color:Red;display:none;">必填</span>
-            <span id="AllLeave1_re" style="color:Red;display:none;">手机号或座机号（区号-号码）</span>
-        </td>
-    </tr>
-</table>
-<table class="DivTable" cellpadding="3" style="border-collapse: collapse;" cellspacing="0" border="0" onmousemove="getDateDiff();">
-    <tr>
-        <td colspan="4" class="TitleTd">&nbsp;本人联系方式</td>
-    </tr>
-    <tr>
-        <td class="EdtTitleBack" width="15%">本人移动电话：</td>
-        <td class="EdtBack" width="35%">
-            <input name="AllLeave1$StuMoveTel" type="text" id="AllLeave1_StuMoveTel" style="width: 115px" maxlength="11" value="18728114037" />
-            <span style="color: red;">*</span>
-            <span id="AllLeave1_RequiredFieldValidator15" style="color:Red;display:none;">必填</span>
-            <span id="AllLeave1_RegularExpressionValidator3" style="color:Red;display:none;">请输入以1开头的11位数字</span>
-        </td>
-        <td class="EdtTitleBack" width="15%">其他联系方式：</td>
-        <td class="EdtBack">
-            <input name="AllLeave1$StuOtherTel" type="text" id="AllLeave1_StuOtherTel" style="width: 115px" maxlength="25" />
-        </td>
-    </tr>
-    <tr>
-        <td rowspan="2" class="EdtTitleBack"><strong>往返交通工具</strong>：</td>
-        <td colspan="3" class="EdtBack">
-            <table width="100%" border="0" cellspacing="0">
-                <tr class="EdtBack">
-                    <td width="300" style="border-width: 0px;">去：<input name="AllLeave1$GoDate" type="text" id="AllLeave1_GoDate" placeholder="请输入日期" class="laydate-icon" style="width:90px;" />
-                        <select name="AllLeave1$GoTime" id="AllLeave1_GoTime">
-	<option value="00">00点</option>
-	<option value="01">01点</option>
-	<option value="02">02点</option>
-	<option value="03">03点</option>
-	<option value="04">04点</option>
-	<option value="05">05点</option>
-	<option value="06">06点</option>
-	<option value="07">07点</option>
-	<option value="08">08点</option>
-	<option value="09">09点</option>
-	<option value="10">10点</option>
-	<option value="11">11点</option>
-	<option selected="selected" value="12">12点</option>
-	<option value="13">13点</option>
-	<option value="14">14点</option>
-	<option value="15">15点</option>
-	<option value="16">16点</option>
-	<option value="17">17点</option>
-	<option value="18">18点</option>
-	<option value="19">19点</option>
-	<option value="20">20点</option>
-	<option value="21">21点</option>
-	<option value="22">22点</option>
-	<option value="23">23点</option>
-</select>
-                        ；交通工具：</td>
-                    <td valign="middle" style="border-width: 0px;">
-                        <table id="AllLeave1_GoVehicle" class="JTGJ" border="0">
-	<tr>
-		<td><input id="AllLeave1_GoVehicle_0" type="radio" name="AllLeave1$GoVehicle" value="汽车" checked="checked" /><label for="AllLeave1_GoVehicle_0">汽车</label></td><td><input id="AllLeave1_GoVehicle_1" type="radio" name="AllLeave1$GoVehicle" value="火车" /><label for="AllLeave1_GoVehicle_1">火车</label></td><td><input id="AllLeave1_GoVehicle_2" type="radio" name="AllLeave1$GoVehicle" value="飞机" /><label for="AllLeave1_GoVehicle_2">飞机</label></td><td><input id="AllLeave1_GoVehicle_3" type="radio" name="AllLeave1$GoVehicle" value="自行车" /><label for="AllLeave1_GoVehicle_3">自行车</label></td><td><input id="AllLeave1_GoVehicle_4" type="radio" name="AllLeave1$GoVehicle" value="其他" /><label for="AllLeave1_GoVehicle_4">其他</label></td>
-	</tr>
-</table></td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <tr class="EdtBack">
-        <td colspan="3" class="EdtBack">
-            <table width="100%" border="0" cellspacing="0">
-                <tr class="EdtBack">
-                    <td width="300" style="border-width: 0px;">返：<input name="AllLeave1$BackDate" type="text" id="AllLeave1_BackDate" placeholder="请输入日期" class="laydate-icon" style="width:90px;" />
-                        <select name="AllLeave1$BackTime" id="AllLeave1_BackTime">
-	<option value="00">00点</option>
-	<option value="01">01点</option>
-	<option value="02">02点</option>
-	<option value="03">03点</option>
-	<option value="04">04点</option>
-	<option value="05">05点</option>
-	<option value="06">06点</option>
-	<option value="07">07点</option>
-	<option value="08">08点</option>
-	<option value="09">09点</option>
-	<option value="10">10点</option>
-	<option value="11">11点</option>
-	<option selected="selected" value="12">12点</option>
-	<option value="13">13点</option>
-	<option value="14">14点</option>
-	<option value="15">15点</option>
-	<option value="16">16点</option>
-	<option value="17">17点</option>
-	<option value="18">18点</option>
-	<option value="19">19点</option>
-	<option value="20">20点</option>
-	<option value="21">21点</option>
-	<option value="22">22点</option>
-	<option value="23">23点</option>
-</select>
-                        ；交通工具：</td>
-                    <td valign="middle" style="border-width: 0px;">
-                        <span id="AllLeave1_BackVehicle" class="JTGJ"><input id="AllLeave1_BackVehicle_0" type="radio" name="AllLeave1$BackVehicle" value="汽车" checked="checked" /><label for="AllLeave1_BackVehicle_0">汽车</label><input id="AllLeave1_BackVehicle_1" type="radio" name="AllLeave1$BackVehicle" value="火车" /><label for="AllLeave1_BackVehicle_1">火车</label><input id="AllLeave1_BackVehicle_2" type="radio" name="AllLeave1$BackVehicle" value="飞机" /><label for="AllLeave1_BackVehicle_2">飞机</label><input id="AllLeave1_BackVehicle_3" type="radio" name="AllLeave1$BackVehicle" value="自行车" /><label for="AllLeave1_BackVehicle_3">自行车</label><input id="AllLeave1_BackVehicle_4" type="radio" name="AllLeave1$BackVehicle" value="其他" /><label for="AllLeave1_BackVehicle_4">其他</label></span></td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="4" class="EdtBack">
-            <br>
-            <strong>&nbsp;&nbsp;学生本人承诺在请假期间履行以下责任：</strong>
-            <br />
-            <br />
-            &nbsp;&nbsp;1.必须按时返校销假。<br />
-            &nbsp;&nbsp;2.外出途中注意出行安全、加强自我保护。<br>
-            &nbsp;&nbsp;3.我已清楚知道学校关于学生外出注意事项和纪律要求，愿意承担责任。<br>
-            &nbsp;&nbsp;4.与学校保持联系。<br />
-            &nbsp;&nbsp;5.我保证按时返校。<br>
-            <br />
-            &nbsp;&nbsp;学生签字：
-          <span id="AllLeave1_UserName" style="font-weight: 700; color: #FF0000">杨瑞杰</span>
-            <input name="AllLeave1$Hidden1" type="hidden" id="AllLeave1_Hidden1" style="width: 15px" value="1" />
-            <br>
-            <br>
-        </td>
-    </tr>
-</table>
-<script>
-    laydate.render({
-        elem: document.getElementById('AllLeave1_LeaveBeginDate'), //指定元素
-        trigger: 'click'
-    });
-    laydate.render({
-        elem: document.getElementById('AllLeave1_LeaveEndDate'), //指定元素
-        trigger: 'click'
-    });
-    laydate.render({
-        elem: document.getElementById('AllLeave1_GoDate'), //指定元素
-        trigger: 'click'
-    });
-    laydate.render({
-        elem: document.getElementById('AllLeave1_BackDate'), //指定元素
-        trigger: 'click'
-    });
-    laydate.render({
-        elem: document.getElementById('AllLeave1_InputDate'), //指定元素
-        trigger: 'click'
-    });
 
-    $(document).ready(function () {
-        $("#AllLeave1_LeaveBeginDate").change(function (event) { layer.alert('1'); });
-        $("#AllLeave1_LeaveEndDate").change(function (event) { layer.alert('1'); });
-    });
+        <table class="DivTable" cellpadding="3" style="background-image: url('./leavebackImage.png')" cellspacing="1"
+            border="0">
+            <tr>
+                <td colspan="4" class="TitleTd">&nbsp;学生基础信息</td>
+            </tr>
+            <tr>
+                <td class="EdtTitleBack" style="width: 15%">学号：</td>
+                <td class="EdtBack" style="width: 35%">
+                    <span id="Student1_StudentNo">202522061146</span>
+                </td>
+                <td class="EdtTitleBack" style="width: 15%">姓名：</td>
+                <td class="EdtBack">
+                    <span id="Student1_Name">杨瑞杰(202522061146)</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="EdtTitleBack">性别：</td>
+                <td class="EdtBack">
+                    <span id="Student1_Sex">男</span>
+                </td>
+                <td class="EdtTitleBack">民族：</td>
+                <td class="EdtBack">
+                    <span id="Student1_Nation">汉</span>
+                </td>
+            </tr>
+            <tr>
 
-    function getDateDiff() {
+                <td class="EdtTitleBack">政治面貌：</td>
+                <td class="EdtBack">
+                    <span id="Student1_Polity">共青团员</span>
+                </td>
+                <td class="EdtTitleBack">班级：</td>
+                <td class="EdtBack">
+                    <span id="Student1_ClassName">2025工程造价2</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="EdtTitleBack">年级：</td>
+                <td class="EdtBack">
+                    <span id="Student1_speGrade">2025</span>
+                </td>
+                <td class="EdtTitleBack">专业：</td>
+                <td class="EdtBack">
+                    <span id="Student1_speName">工程造价</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="EdtTitleBack">学院：</td>
+                <td class="EdtBack">
+                    <span id="Student1_CollegeName">建筑工程学院</span>
+                </td>
+                <td class="EdtTitleBack">联系电话：</td>
+                <td class="EdtBack" colspan="3">
+                    <span id="Student1_MoveTel">16608388672</span>
+                </td>
+            </tr>
+        </table>
 
-        if (document.getElementById("AllLeave1_LeaveBeginDate").value != "" && document.getElementById("AllLeave1_LeaveEndDate").value != "") {
-            if (document.getElementById("AllLeave1_LeaveBeginDate").value > document.getElementById("AllLeave1_LeaveEndDate").value) {
-                layer.alert('请假结束时间必须大于等于开始时间！');
-                document.getElementById("AllLeave1_LeaveEndDate").value = "";
-            }
-            else if (document.getElementById("AllLeave1_LeaveBeginDate").value == document.getElementById("AllLeave1_LeaveEndDate").value) {
-                document.getElementById("AllLeave1_LeaveDay").value = "0";
-                if (document.getElementById("AllLeave1_LeaveBeginTime").value < document.getElementById("AllLeave1_LeaveEndTime").value) {
-                    DateDiff2(document.getElementById("AllLeave1_LeaveBeginDate").value, document.getElementById("AllLeave1_LeaveEndDate").value, document.getElementById("AllLeave1_LeaveBeginTime").value, document.getElementById("AllLeave1_LeaveEndTime").value);
-                }
-                else if (document.getElementById("AllLeave1_LeaveBeginTime").value = document.getElementById("AllLeave1_LeaveEndTime").value) {
-                    if (document.getElementById("AllLeave1_LeaveBeginMinute").value > document.getElementById("AllLeave1_LeaveEndMinute").value) {
+        <table class="DivTable" cellpadding="3" style="border-collapse: collapse;" cellspacing="0" border="0"
+            onmousemove="getDateDiff();">
+            <tr>
+                <td colspan="4" class="TitleTd">&nbsp;请假信息
+                    <span id="AllLeave1_LbStatus" style="color: #FF0000">请假状态：已销假</span>
+
+                </td>
+            </tr>
+            <tr id="TimePanel" onmousemove="getDateDiff();">
+                <td class="EdtTitleBack">请假时间：</td>
+                <td colspan="3" class="EdtBack">
+                    <input name="AllLeave1$LeaveBeginDate" type="text" value="2025-12-10" id="AllLeave1_LeaveBeginDate"
+                        placeholder="请输入日期" class="laydate-icon" onclick="laydate()" style="width:90px;" />
+                    <span style="color: red;">*</span>
+                    <span id="AllLeave1_RequiredFieldValidator1" style="color:Red;display:none;">必填</span>
+                    <select name="AllLeave1$LeaveBeginTime" id="AllLeave1_LeaveBeginTime">
+                        <option value="00">00点</option>
+                        <option value="01">01点</option>
+                        <option value="02">02点</option>
+                        <option value="03">03点</option>
+                        <option value="04">04点</option>
+                        <option value="05">05点</option>
+                        <option value="06">06点</option>
+                        <option value="07">07点</option>
+                        <option value="08">08点</option>
+                        <option value="09">09点</option>
+                        <option value="10">10点</option>
+                        <option value="11">11点</option>
+                        <option value="12">12点</option>
+                        <option value="13">13点</option>
+                        <option value="14">14点</option>
+                        <option value="15">15点</option>
+                        <option value="16">16点</option>
+                        <option value="17">17点</option>
+                        <option value="18">18点</option>
+                        <option selected="selected" value="19">19点</option>
+                        <option value="20">20点</option>
+                        <option value="21">21点</option>
+                        <option value="22">22点</option>
+                        <option value="23">23点</option>
+                    </select>
+                    <select name="AllLeave1$LeaveBeginMinute" id="AllLeave1_LeaveBeginMinute">
+                        <option value="00">00分</option>
+                        <option value="01">01分</option>
+                        <option value="02">02分</option>
+                        <option value="03">03分</option>
+                        <option value="04">04分</option>
+                        <option value="05">05分</option>
+                        <option value="06">06分</option>
+                        <option value="07">07分</option>
+                        <option value="08">08分</option>
+                        <option value="09">09分</option>
+                        <option value="10">10分</option>
+                        <option value="11">11分</option>
+                        <option value="12">12分</option>
+                        <option value="13">13分</option>
+                        <option value="14">14分</option>
+                        <option value="15">15分</option>
+                        <option value="16">16分</option>
+                        <option value="17">17分</option>
+                        <option value="18">18分</option>
+                        <option value="19">19分</option>
+                        <option value="20">20分</option>
+                        <option value="21">21分</option>
+                        <option value="22">22分</option>
+                        <option value="23">23分</option>
+                        <option value="24">24分</option>
+                        <option value="25">25分</option>
+                        <option value="26">26分</option>
+                        <option value="27">27分</option>
+                        <option value="28">28分</option>
+                        <option value="29">29分</option>
+                        <option value="30">30分</option>
+                        <option value="31">31分</option>
+                        <option value="32">32分</option>
+                        <option value="33">33分</option>
+                        <option value="34">34分</option>
+                        <option value="35">35分</option>
+                        <option value="36">36分</option>
+                        <option value="37">37分</option>
+                        <option value="38">38分</option>
+                        <option value="39">39分</option>
+                        <option selected="selected" value="40">40分</option>
+                        <option value="41">41分</option>
+                        <option value="42">42分</option>
+                        <option value="43">43分</option>
+                        <option value="44">44分</option>
+                        <option value="45">45分</option>
+                        <option value="46">46分</option>
+                        <option value="47">47分</option>
+                        <option value="48">48分</option>
+                        <option value="49">49分</option>
+                        <option value="50">50分</option>
+                        <option value="51">51分</option>
+                        <option value="52">52分</option>
+                        <option value="53">53分</option>
+                        <option value="54">54分</option>
+                        <option value="55">55分</option>
+                        <option value="56">56分</option>
+                        <option value="57">57分</option>
+                        <option value="58">58分</option>
+                        <option value="59">59分</option>
+                    </select>
+                    至<input name="AllLeave1$LeaveEndDate" type="text" value="2025-12-10" id="AllLeave1_LeaveEndDate"
+                        placeholder="请输入日期" class="laydate-icon" onclick="laydate()" style="width:90px;" />
+                    <span style="color: red;">*</span>
+                    <span id="AllLeave1_RequiredFieldValidator5" style="color:Red;display:none;">必填</span>
+                    <select name="AllLeave1$LeaveEndTime" id="AllLeave1_LeaveEndTime">
+                        <option value="00">00点</option>
+                        <option value="01">01点</option>
+                        <option value="02">02点</option>
+                        <option value="03">03点</option>
+                        <option value="04">04点</option>
+                        <option value="05">05点</option>
+                        <option value="06">06点</option>
+                        <option value="07">07点</option>
+                        <option value="08">08点</option>
+                        <option value="09">09点</option>
+                        <option value="10">10点</option>
+                        <option value="11">11点</option>
+                        <option value="12">12点</option>
+                        <option value="13">13点</option>
+                        <option value="14">14点</option>
+                        <option value="15">15点</option>
+                        <option value="16">16点</option>
+                        <option value="17">17点</option>
+                        <option value="18">18点</option>
+                        <option value="19">19点</option>
+                        <option value="20">20点</option>
+                        <option selected="selected" value="21">21点</option>
+                        <option value="22">22点</option>
+                        <option value="23">23点</option>
+                    </select>
+                    <select name="AllLeave1$LeaveEndMinute" id="AllLeave1_LeaveEndMinute">
+                        <option value="00">00分</option>
+                        <option value="01">01分</option>
+                        <option value="02">02分</option>
+                        <option value="03">03分</option>
+                        <option value="04">04分</option>
+                        <option value="05">05分</option>
+                        <option value="06">06分</option>
+                        <option value="07">07分</option>
+                        <option value="08">08分</option>
+                        <option value="09">09分</option>
+                        <option value="10">10分</option>
+                        <option value="11">11分</option>
+                        <option value="12">12分</option>
+                        <option value="13">13分</option>
+                        <option value="14">14分</option>
+                        <option value="15">15分</option>
+                        <option value="16">16分</option>
+                        <option value="17">17分</option>
+                        <option value="18">18分</option>
+                        <option value="19">19分</option>
+                        <option selected="selected" value="20">20分</option>
+                        <option value="21">21分</option>
+                        <option value="22">22分</option>
+                        <option value="23">23分</option>
+                        <option value="24">24分</option>
+                        <option value="25">25分</option>
+                        <option value="26">26分</option>
+                        <option value="27">27分</option>
+                        <option value="28">28分</option>
+                        <option value="29">29分</option>
+                        <option value="30">30分</option>
+                        <option value="31">31分</option>
+                        <option value="32">32分</option>
+                        <option value="33">33分</option>
+                        <option value="34">34分</option>
+                        <option value="35">35分</option>
+                        <option value="36">36分</option>
+                        <option value="37">37分</option>
+                        <option value="38">38分</option>
+                        <option value="39">39分</option>
+                        <option value="40">40分</option>
+                        <option value="41">41分</option>
+                        <option value="42">42分</option>
+                        <option value="43">43分</option>
+                        <option value="44">44分</option>
+                        <option value="45">45分</option>
+                        <option value="46">46分</option>
+                        <option value="47">47分</option>
+                        <option value="48">48分</option>
+                        <option value="49">49分</option>
+                        <option value="50">50分</option>
+                        <option value="51">51分</option>
+                        <option value="52">52分</option>
+                        <option value="53">53分</option>
+                        <option value="54">54分</option>
+                        <option value="55">55分</option>
+                        <option value="56">56分</option>
+                        <option value="57">57分</option>
+                        <option value="58">58分</option>
+                        <option value="59">59分</option>
+                    </select>
+                    共计
+                    <input name="AllLeave1$LeaveDay" type="text" id="AllLeave1_LeaveDay"
+                        style="width: 45px; border-top-style: none; border-right-style: none; border-left-style: none; text-align: center; border-bottom-style: none;"
+                        maxlength="2" readonly="readOnly" />
+                    天
+                    <input name="AllLeave1$LeaveHour" type="text" id="AllLeave1_LeaveHour"
+                        style="width: 45px; border-top-style: none; border-right-style: none; border-left-style: none; text-align: center; border-bottom-style: none;"
+                        maxlength="2" readonly="readOnly" value="1" />
+                    小时
+                    <input name="AllLeave1$LeaveMinute" type="text" id="AllLeave1_LeaveMinute"
+                        style="width: 35px; border-top-style: none; border-right-style: none; border-left-style: none; text-align: center; border-bottom-style: none;"
+                        maxlength="2" readonly="readOnly" value="40" />
+                    分
+
+                </td>
+            </tr>
+            <tr>
+                <td class="EdtTitleBack">请假事由类型：</td>
+                <td colspan="3" class="EdtBack">
+                    <span id="AllLeave1_LeaveType"><input id="AllLeave1_LeaveType_0" type="radio"
+                            name="AllLeave1$LeaveType" value="02048001" /><label
+                            for="AllLeave1_LeaveType_0">求职</label><input id="AllLeave1_LeaveType_1" type="radio"
+                            name="AllLeave1$LeaveType" value="02048002" /><label
+                            for="AllLeave1_LeaveType_1">实习</label><input id="AllLeave1_LeaveType_2" type="radio"
+                            name="AllLeave1$LeaveType" value="02048003" /><label
+                            for="AllLeave1_LeaveType_2">返家</label><input id="AllLeave1_LeaveType_3" type="radio"
+                            name="AllLeave1$LeaveType" value="02048004" /><label
+                            for="AllLeave1_LeaveType_3">培训</label><input id="AllLeave1_LeaveType_4" type="radio"
+                            name="AllLeave1$LeaveType" value="02048005" /><label
+                            for="AllLeave1_LeaveType_4">旅游</label><input id="AllLeave1_LeaveType_5" type="radio"
+                            name="AllLeave1$LeaveType" value="02048006" /><label
+                            for="AllLeave1_LeaveType_5">病假</label><input id="AllLeave1_LeaveType_6" type="radio"
+                            name="AllLeave1$LeaveType" value="02048007" checked="checked" /><label
+                            for="AllLeave1_LeaveType_6">事假</label><input id="AllLeave1_LeaveType_7" type="radio"
+                            name="AllLeave1$LeaveType" value="02048008" /><label
+                            for="AllLeave1_LeaveType_7">公假</label><input id="AllLeave1_LeaveType_8" type="radio"
+                            name="AllLeave1$LeaveType" value="02048009" /><label
+                            for="AllLeave1_LeaveType_8">社会实践</label></span>
+                    <span style="color: red;">*</span>
+                    <span id="AllLeave1_RequiredFieldValidator3" style="color:Red;display:none;">必填</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="EdtTitleBack">事由说明：</td>
+                <td class="EdtBack" colspan="3">
+                    <textarea name="AllLeave1$LeaveThing" id="AllLeave1_LeaveThing" style="width: 90%; height: 90px"
+                        maxlength="500">有事</textarea>
+                    <span style="color: red;">*</span>
+                    <span id="AllLeave1_RequiredFieldValidatorlt" style="color:Red;display:none;">必填</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="EdtTitleBack" style="width: 15%">外出地点：</td>
+                <td class="EdtBack" style="width: 35%">
+                    <input name="AllLeave1$OutAddress" type="text" id="AllLeave1_OutAddress" style="width: 50%"
+                        maxlength="50" onblur="sa()" value="学校周边" />
+                    <span style="color: red;">*</span>
+                    <span id="AllLeave1_RequiredFieldValidator2" style="color:Red;display:none;">必填</span>
+                </td>
+                <td class="EdtTitleBack" style="width: 15%">同行人数：</td>
+                <td class="EdtBack">
+                    <select name="AllLeave1$WithNumNo" id="AllLeave1_WithNumNo">
+                        <option selected="selected" value="0">0人</option>
+                        <option value="1">1人</option>
+                        <option value="2">2人</option>
+                        <option value="3">3人</option>
+                        <option value="4">4人</option>
+                        <option value="5">5人</option>
+                        <option value="6">6人</option>
+                        <option value="7">7人</option>
+                        <option value="8">8人</option>
+                        <option value="9">9人</option>
+                        <option value="10">10人</option>
+                        <option value="11">11人</option>
+                        <option value="12">12人</option>
+                        <option value="13">13人</option>
+                        <option value="14">14人</option>
+                        <option value="15">15人</option>
+                        <option value="16">16人</option>
+                        <option value="17">17人</option>
+                        <option value="18">18人</option>
+                        <option value="19">19人</option>
+                        <option value="20">20人</option>
+                        <option value="21">21人</option>
+                        <option value="22">22人</option>
+                        <option value="23">23人</option>
+                        <option value="24">24人</option>
+                        <option value="25">25人</option>
+                        <option value="26">26人</option>
+                        <option value="27">27人</option>
+                        <option value="28">28人</option>
+                        <option value="29">29人</option>
+                        <option value="30">30人</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="EdtTitleBack" style="width: 15%">学生提交时间：</td>
+                <td class="EdtBack" style="width: 35%">
+                    <input name="AllLeave1$InputDate" type="text" value="2025-12-10" id="AllLeave1_InputDate"
+                        placeholder="请输入日期" class="laydate-icon" onclick="laydate()" style="width:90px;" />
+                </td>
+                <td class="EdtTitleBack" style="width: 15%">是否外宿</td>
+                <td class="EdtBack">
+                    <span id="AllLeave1_IfOut" class="JTGJ"><input id="AllLeave1_IfOut_0" type="radio"
+                            name="AllLeave1$IfOut" value="1" /><label for="AllLeave1_IfOut_0">是</label><input
+                            id="AllLeave1_IfOut_1" type="radio" name="AllLeave1$IfOut" value="0"
+                            checked="checked" /><label for="AllLeave1_IfOut_1">否</label></span>
+                    <span style="color: red;">*</span>
+                    <span id="AllLeave1_RequiredFieldValidator8" style="color:Red;display:none;">必填</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="EdtTitleBack">&nbsp;附件</td>
+                <td colspan="3" class="EdtBack">
+                    <div style="position: relative;">
+                        <div id="AllLeave1_MutiFileUpload_MsgVisible" style="display:none;">
+                            &nbsp;&nbsp;(<font color="#ff0000">
+                                <font face="宋体">存在文件必须填写说明，<font style="color: red">
+                                        附件类型包括：.jpg,.jpeg,.gif,.png,.bmp,.doc,.docx,.rar,.pdf,.xls,.xlsx,文件大小在20M之内
+                                    </font>
+                                </font>
+                            </font>)<br />
+                            文件：<input type="file" name="AllLeave1$MutiFileUpload$SendFile"
+                                id="AllLeave1_MutiFileUpload_SendFile" onchange="getFileName(this);" /><img
+                                id="AllLeave1_MutiFileUpload_tempimg" dynsrc="" style="display: none" />&nbsp;&nbsp;文件名：
+                            <input name="AllLeave1$MutiFileUpload$AddressThing" type="text"
+                                id="AllLeave1_MutiFileUpload_AddressThing" style="width:234px;" />
+                            &nbsp;<input type="submit" name="AllLeave1$MutiFileUpload$BtnSend" value="上传附件"
+                                id="AllLeave1_MutiFileUpload_BtnSend" disabled="disabled" /><br />
+                        </div>
+                        <input name="AllLeave1$MutiFileUpload$TextBox1" type="text"
+                            id="AllLeave1_MutiFileUpload_TextBox1" class="locationfoces"
+                            style="width:0px;display:none" />
+                        <table width="80%">
+                            <tr>
+                                <td>
+
+                                    <a id="AllLeave1_MutiFileUpload_HyperLink1"></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <style>
+                        .locationfoces {
+                            position: absolute;
+                            top: 130px;
+                            z-index: -1;
+                        }
+                    </style>
+                    <input type="hidden" name="AllLeave1$MutiFileUpload$SystemIdHf"
+                        id="AllLeave1_MutiFileUpload_SystemIdHf" value="e52a5c79-ee85-4b61-b6eb-fa1bf661a9f0" />
+                    <input name="AllLeave1$MutiFileUpload$Flag" type="hidden" id="AllLeave1_MutiFileUpload_Flag"
+                        value="0" />
+                    <input name="AllLeave1$MutiFileUpload$fn" type="hidden" id="AllLeave1_MutiFileUpload_fn" />
+                    <input name="AllLeave1$MutiFileUpload$swf" type="hidden" id="AllLeave1_MutiFileUpload_swf" />
+                    <input name="AllLeave1$MutiFileUpload$opentype" type="hidden" id="AllLeave1_MutiFileUpload_opentype"
+                        value="1" />
+                    <div id="overlay"></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td colspan="4" class="TitleTd">&nbsp;外出联系人信息</td>
+            </tr>
+            <tr>
+                <td class="EdtTitleBack">固定电话：</td>
+                <td class="EdtBack">
+                    <input name="AllLeave1$OutTel" type="text" id="AllLeave1_OutTel" style="width: 115px"
+                        maxlength="13" />
+                    <span id="AllLeave1_RegularExpressionValidator1" style="color:Red;display:none;">格式：区号+号码</span>
+                </td>
+                <td class="EdtTitleBack">移动电话：</td>
+                <td class="EdtBack">
+                    <input name="AllLeave1$OutMoveTel" type="text" id="AllLeave1_OutMoveTel" style="width: 115px"
+                        maxlength="11" value="15082021157" />
+                    <span style="color: red">*</span>
+                    <span id="AllLeave1_RequiredFieldValidator9" style="color:Red;display:none;">必填</span>
+                    <span id="AllLeave1_RegularExpressionValidator2"
+                        style="color:Red;display:none;">请输入以1开头的11位数字</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="EdtTitleBack">与本人关系：</td>
+                <td class="EdtBack">
+                    <input name="AllLeave1$Relation" type="text" id="AllLeave1_Relation" style="width: 115px"
+                        maxlength="20" value="父子" />
+                    <span style="color: red">*</span>
+                    <span id="AllLeave1_RequiredFieldValidator7" style="color:Red;display:none;">必填</span>
+                </td>
+                <td class="EdtTitleBack">联系人姓名：</td>
+                <td class="EdtBack">
+                    <input name="AllLeave1$OutName" type="text" id="AllLeave1_OutName" style="width: 115px"
+                        maxlength="20" value="杨宗辉" />
+                    <span style="color: red">*</span>
+                    <span id="AllLeave1_RequiredFieldValidator10" style="color:Red;display:none;">必填</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="EdtTitleBack">家长联系人：</td>
+                <td class="EdtBack">
+                    <input name="AllLeave1$JHRName" type="text" id="AllLeave1_JHRName" style="width: 115px"
+                        maxlength="15" value="杨宗辉" />
+                    <span style="color: red">*</span>
+                    <span id="AllLeave1_RequiredFieldValidator4" style="color:Red;display:none;">必填</span>
+                </td>
+                <td class="EdtTitleBack">家长联系方式：</td>
+                <td class="EdtBack">
+                    <input name="AllLeave1$JHRPhone" type="text" id="AllLeave1_JHRPhone" style="width: 115px"
+                        maxlength="13" value="15082021157" />
+                    <span style="color: red">*</span>
+                    <span id="AllLeave1_RequiredFieldValidator6" style="color:Red;display:none;">必填</span>
+                    <span id="AllLeave1_re" style="color:Red;display:none;">手机号或座机号（区号-号码）</span>
+                </td>
+            </tr>
+        </table>
+        <table class="DivTable" cellpadding="3" style="border-collapse: collapse;" cellspacing="0" border="0"
+            onmousemove="getDateDiff();">
+            <tr>
+                <td colspan="4" class="TitleTd">&nbsp;本人联系方式</td>
+            </tr>
+            <tr>
+                <td class="EdtTitleBack" width="15%">本人移动电话：</td>
+                <td class="EdtBack" width="35%">
+                    <input name="AllLeave1$StuMoveTel" type="text" id="AllLeave1_StuMoveTel" style="width: 115px"
+                        maxlength="11" value="18728114037" />
+                    <span style="color: red;">*</span>
+                    <span id="AllLeave1_RequiredFieldValidator15" style="color:Red;display:none;">必填</span>
+                    <span id="AllLeave1_RegularExpressionValidator3"
+                        style="color:Red;display:none;">请输入以1开头的11位数字</span>
+                </td>
+                <td class="EdtTitleBack" width="15%">其他联系方式：</td>
+                <td class="EdtBack">
+                    <input name="AllLeave1$StuOtherTel" type="text" id="AllLeave1_StuOtherTel" style="width: 115px"
+                        maxlength="25" />
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2" class="EdtTitleBack"><strong>往返交通工具</strong>：</td>
+                <td colspan="3" class="EdtBack">
+                    <table width="100%" border="0" cellspacing="0">
+                        <tr class="EdtBack">
+                            <td width="300" style="border-width: 0px;">去：<input name="AllLeave1$GoDate" type="text"
+                                    id="AllLeave1_GoDate" placeholder="请输入日期" class="laydate-icon"
+                                    style="width:90px;" />
+                                <select name="AllLeave1$GoTime" id="AllLeave1_GoTime">
+                                    <option value="00">00点</option>
+                                    <option value="01">01点</option>
+                                    <option value="02">02点</option>
+                                    <option value="03">03点</option>
+                                    <option value="04">04点</option>
+                                    <option value="05">05点</option>
+                                    <option value="06">06点</option>
+                                    <option value="07">07点</option>
+                                    <option value="08">08点</option>
+                                    <option value="09">09点</option>
+                                    <option value="10">10点</option>
+                                    <option value="11">11点</option>
+                                    <option selected="selected" value="12">12点</option>
+                                    <option value="13">13点</option>
+                                    <option value="14">14点</option>
+                                    <option value="15">15点</option>
+                                    <option value="16">16点</option>
+                                    <option value="17">17点</option>
+                                    <option value="18">18点</option>
+                                    <option value="19">19点</option>
+                                    <option value="20">20点</option>
+                                    <option value="21">21点</option>
+                                    <option value="22">22点</option>
+                                    <option value="23">23点</option>
+                                </select>
+                                ；交通工具：
+                            </td>
+                            <td valign="middle" style="border-width: 0px;">
+                                <table id="AllLeave1_GoVehicle" class="JTGJ" border="0">
+                                    <tr>
+                                        <td><input id="AllLeave1_GoVehicle_0" type="radio" name="AllLeave1$GoVehicle"
+                                                value="汽车" checked="checked" /><label
+                                                for="AllLeave1_GoVehicle_0">汽车</label></td>
+                                        <td><input id="AllLeave1_GoVehicle_1" type="radio" name="AllLeave1$GoVehicle"
+                                                value="火车" /><label for="AllLeave1_GoVehicle_1">火车</label></td>
+                                        <td><input id="AllLeave1_GoVehicle_2" type="radio" name="AllLeave1$GoVehicle"
+                                                value="飞机" /><label for="AllLeave1_GoVehicle_2">飞机</label></td>
+                                        <td><input id="AllLeave1_GoVehicle_3" type="radio" name="AllLeave1$GoVehicle"
+                                                value="自行车" /><label for="AllLeave1_GoVehicle_3">自行车</label></td>
+                                        <td><input id="AllLeave1_GoVehicle_4" type="radio" name="AllLeave1$GoVehicle"
+                                                value="其他" /><label for="AllLeave1_GoVehicle_4">其他</label></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="EdtBack">
+                <td colspan="3" class="EdtBack">
+                    <table width="100%" border="0" cellspacing="0">
+                        <tr class="EdtBack">
+                            <td width="300" style="border-width: 0px;">返：<input name="AllLeave1$BackDate" type="text"
+                                    id="AllLeave1_BackDate" placeholder="请输入日期" class="laydate-icon"
+                                    style="width:90px;" />
+                                <select name="AllLeave1$BackTime" id="AllLeave1_BackTime">
+                                    <option value="00">00点</option>
+                                    <option value="01">01点</option>
+                                    <option value="02">02点</option>
+                                    <option value="03">03点</option>
+                                    <option value="04">04点</option>
+                                    <option value="05">05点</option>
+                                    <option value="06">06点</option>
+                                    <option value="07">07点</option>
+                                    <option value="08">08点</option>
+                                    <option value="09">09点</option>
+                                    <option value="10">10点</option>
+                                    <option value="11">11点</option>
+                                    <option selected="selected" value="12">12点</option>
+                                    <option value="13">13点</option>
+                                    <option value="14">14点</option>
+                                    <option value="15">15点</option>
+                                    <option value="16">16点</option>
+                                    <option value="17">17点</option>
+                                    <option value="18">18点</option>
+                                    <option value="19">19点</option>
+                                    <option value="20">20点</option>
+                                    <option value="21">21点</option>
+                                    <option value="22">22点</option>
+                                    <option value="23">23点</option>
+                                </select>
+                                ；交通工具：
+                            </td>
+                            <td valign="middle" style="border-width: 0px;">
+                                <span id="AllLeave1_BackVehicle" class="JTGJ"><input id="AllLeave1_BackVehicle_0"
+                                        type="radio" name="AllLeave1$BackVehicle" value="汽车" checked="checked" /><label
+                                        for="AllLeave1_BackVehicle_0">汽车</label><input id="AllLeave1_BackVehicle_1"
+                                        type="radio" name="AllLeave1$BackVehicle" value="火车" /><label
+                                        for="AllLeave1_BackVehicle_1">火车</label><input id="AllLeave1_BackVehicle_2"
+                                        type="radio" name="AllLeave1$BackVehicle" value="飞机" /><label
+                                        for="AllLeave1_BackVehicle_2">飞机</label><input id="AllLeave1_BackVehicle_3"
+                                        type="radio" name="AllLeave1$BackVehicle" value="自行车" /><label
+                                        for="AllLeave1_BackVehicle_3">自行车</label><input id="AllLeave1_BackVehicle_4"
+                                        type="radio" name="AllLeave1$BackVehicle" value="其他" /><label
+                                        for="AllLeave1_BackVehicle_4">其他</label></span>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" class="EdtBack">
+                    <br>
+                    <strong>&nbsp;&nbsp;学生本人承诺在请假期间履行以下责任：</strong>
+                    <br />
+                    <br />
+                    &nbsp;&nbsp;1.必须按时返校销假。<br />
+                    &nbsp;&nbsp;2.外出途中注意出行安全、加强自我保护。<br>
+                    &nbsp;&nbsp;3.我已清楚知道学校关于学生外出注意事项和纪律要求，愿意承担责任。<br>
+                    &nbsp;&nbsp;4.与学校保持联系。<br />
+                    &nbsp;&nbsp;5.我保证按时返校。<br>
+                    <br />
+                    &nbsp;&nbsp;学生签字：
+                    <span id="AllLeave1_UserName" style="font-weight: 700; color: #FF0000">杨瑞杰</span>
+                    <input name="AllLeave1$Hidden1" type="hidden" id="AllLeave1_Hidden1" style="width: 15px"
+                        value="1" />
+                    <br>
+                    <br>
+                </td>
+            </tr>
+        </table>
+        <script>
+            laydate.render({
+                elem: document.getElementById('AllLeave1_LeaveBeginDate'), //指定元素
+                trigger: 'click'
+            });
+            laydate.render({
+                elem: document.getElementById('AllLeave1_LeaveEndDate'), //指定元素
+                trigger: 'click'
+            });
+            laydate.render({
+                elem: document.getElementById('AllLeave1_GoDate'), //指定元素
+                trigger: 'click'
+            });
+            laydate.render({
+                elem: document.getElementById('AllLeave1_BackDate'), //指定元素
+                trigger: 'click'
+            });
+            laydate.render({
+                elem: document.getElementById('AllLeave1_InputDate'), //指定元素
+                trigger: 'click'
+            });
+
+            $(document).ready(function () {
+                $("#AllLeave1_LeaveBeginDate").change(function (event) { layer.alert('1'); });
+                $("#AllLeave1_LeaveEndDate").change(function (event) { layer.alert('1'); });
+            });
+
+            function getDateDiff() {
+
+                if (document.getElementById("AllLeave1_LeaveBeginDate").value != "" && document.getElementById("AllLeave1_LeaveEndDate").value != "") {
+                    if (document.getElementById("AllLeave1_LeaveBeginDate").value > document.getElementById("AllLeave1_LeaveEndDate").value) {
                         layer.alert('请假结束时间必须大于等于开始时间！');
-                        document.getElementById("AllLeave1_LeaveEndMinute").value = "";
+                        document.getElementById("AllLeave1_LeaveEndDate").value = "";
                     }
-                    DateDiff2(document.getElementById("AllLeave1_LeaveBeginTime").value, document.getElementById("AllLeave1_LeaveEndTime").value);
+                    else if (document.getElementById("AllLeave1_LeaveBeginDate").value == document.getElementById("AllLeave1_LeaveEndDate").value) {
+                        document.getElementById("AllLeave1_LeaveDay").value = "0";
+                        if (document.getElementById("AllLeave1_LeaveBeginTime").value < document.getElementById("AllLeave1_LeaveEndTime").value) {
+                            DateDiff2(document.getElementById("AllLeave1_LeaveBeginDate").value, document.getElementById("AllLeave1_LeaveEndDate").value, document.getElementById("AllLeave1_LeaveBeginTime").value, document.getElementById("AllLeave1_LeaveEndTime").value);
+                        }
+                        else if (document.getElementById("AllLeave1_LeaveBeginTime").value = document.getElementById("AllLeave1_LeaveEndTime").value) {
+                            if (document.getElementById("AllLeave1_LeaveBeginMinute").value > document.getElementById("AllLeave1_LeaveEndMinute").value) {
+                                layer.alert('请假结束时间必须大于等于开始时间！');
+                                document.getElementById("AllLeave1_LeaveEndMinute").value = "";
+                            }
+                            DateDiff2(document.getElementById("AllLeave1_LeaveBeginTime").value, document.getElementById("AllLeave1_LeaveEndTime").value);
+                        }
+                        else {
+                            layer.alert('请假结束时间必须大于等于开始时间！');
+                            document.getElementById("AllLeave1_LeaveBeginTime").value = "08";
+                            document.getElementById("AllLeave1_LeaveEndTime").value = "08";
+                        }
+                    }
+                    else
+                        DateDiff2(document.getElementById("AllLeave1_LeaveBeginDate").value, document.getElementById("AllLeave1_LeaveEndDate").value, document.getElementById("AllLeave1_LeaveBeginTime").value, document.getElementById("AllLeave1_LeaveEndTime").value);
+
+
+                    if (document.getElementById("AllLeave1_GoDate").value != "") {
+                        if (new Date(document.getElementById("AllLeave1_LeaveBeginDate").value.replace("-", ",")).getTime() > new Date(document.getElementById("AllLeave1_GoDate").value.replace("-", ",")).getTime()
+                            || (new Date(document.getElementById("AllLeave1_LeaveBeginDate").value.replace("-", ",")).getTime() == new Date(document.getElementById("AllLeave1_GoDate").value.replace("-", ",")).getTime()
+                                && document.getElementById("AllLeave1_GoTime").value < document.getElementById("AllLeave1_LeaveBeginTime").value)
+                            || new Date(document.getElementById("AllLeave1_GoDate").value.replace("-", ",")).getTime() > new Date(document.getElementById("AllLeave1_LeaveEndDate").value.replace("-", ",")).getTime()
+                            || (new Date(document.getElementById("AllLeave1_LeaveEndDate").value.replace("-", ",")).getTime() == new Date(document.getElementById("AllLeave1_GoDate").value.replace("-", ",")).getTime()
+                                && document.getElementById("AllLeave1_GoTime").value > document.getElementById("AllLeave1_LeaveEndTime").value)) {
+                            layer.alert('出发时间必须在请假时间内！');
+                            document.getElementById("AllLeave1_GoDate").value = "";
+                        }
+                    }
+
+                    if (document.getElementById("AllLeave1_BackDate").value != "") {
+                        if (document.getElementById("AllLeave1_GoDate").value > document.getElementById("AllLeave1_BackDate").value) {
+                            layer.alert('返回时间必须大于出发时间！');
+                            document.getElementById("AllLeave1_BackDate").value = "";
+                        }
+                        if (document.getElementById("AllLeave1_GoDate").value == document.getElementById("AllLeave1_BackDate").value
+                            && document.getElementById("AllLeave1_GoTime").value >= document.getElementById("AllLeave1_BackTime").value) {
+                            layer.alert('返回时间必须大于出发时间！');
+                            document.getElementById("AllLeave1_BackDate").value = "";
+                        }
+                        if (new Date(document.getElementById("AllLeave1_LeaveBeginDate").value.replace("-", ",")).getTime() > new Date(document.getElementById("AllLeave1_BackDate").value.replace("-", ",")).getTime()
+                            || (new Date(document.getElementById("AllLeave1_LeaveBeginDate").value.replace("-", ",")).getTime() == new Date(document.getElementById("AllLeave1_BackDate").value.replace("-", ",")).getTime()
+                                && document.getElementById("AllLeave1_BackTime").value < document.getElementById("AllLeave1_LeaveBeginTime").value)
+                            || new Date(document.getElementById("AllLeave1_BackDate").value.replace("-", ",")).getTime() > new Date(document.getElementById("AllLeave1_LeaveEndDate").value.replace("-", ",")).getTime()
+                            || (new Date(document.getElementById("AllLeave1_LeaveEndDate").value.replace("-", ",")).getTime() == new Date(document.getElementById("AllLeave1_BackDate").value.replace("-", ",")).getTime()
+                                && document.getElementById("AllLeave1_BackTime").value > document.getElementById("AllLeave1_LeaveEndTime").value)) {
+                            layer.alert('返程时间必须在请假时间内！');
+                            document.getElementById("AllLeave1_BackDate").value = "";
+                        }
+                    }
+                }
+            }
+
+            function DateDiff1(beginTime1, endTime1)   //计算天数的函数
+            {
+                var beginTime, endTime, iDays;
+                beginTime = parseInt(beginTime1);
+                endTime = parseInt(endTime1);
+
+                iDays = (parseFloat((endTime - beginTime))).toString();
+                document.getElementById("AllLeave1_LeaveHour").value = iDays;
+            }
+
+            function DateDiff2(beginDate, endDate, beginTime1, endTime1)   //计算天数的函数
+            {
+                //debugger;
+                //beginDate和endDate都是2007-8-10格式
+                var arrbeginDate, Date1, Date2, arrendDate, iDays, beginTime, endTime
+                beginTime = parseInt(beginTime1);
+                endTime = parseInt(endTime1)
+
+                arrbeginDate = beginDate.split("-")
+                Date1 = new Date(arrbeginDate[1] + '-' + arrbeginDate[2] + '-' + arrbeginDate[0] + ' ' + beginTime + ':' + document.getElementById("AllLeave1_LeaveBeginMinute").value + ':00')    //转换为2007-8-10格式
+                arrendDate = endDate.split("-")
+                Date2 = new Date(arrendDate[1] + '-' + arrendDate[2] + '-' + arrendDate[0] + ' ' + endTime + ':' + document.getElementById("AllLeave1_LeaveEndMinute").value + ':00')
+                const timeDifference = Math.abs(Date1.getTime() - Date2.getTime());
+
+                const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+                document.getElementById("AllLeave1_LeaveDay").value = parseInt(days);
+                /* }*/
+                const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+                document.getElementById("AllLeave1_LeaveHour").value = hours;
+                document.getElementById("AllLeave1_LeaveMinute").value = minutes;
+            }
+
+            function getNowFormatDate() {
+                var day = new Date();
+
+                var Year = 0;
+                var Month = 0;
+                var Day = 0;
+                var CurrentDate = "";
+                //初始化时间   
+                Year = day.getFullYear();
+                Month = day.getMonth() + 1;
+                Day = day.getDate();
+
+                CurrentDate += Year + "-";
+
+                if (Month >= 10) {
+                    CurrentDate += Month + "-";
                 }
                 else {
-                    layer.alert('请假结束时间必须大于等于开始时间！');
-                    document.getElementById("AllLeave1_LeaveBeginTime").value = "08";
-                    document.getElementById("AllLeave1_LeaveEndTime").value = "08";
+                    CurrentDate += "0" + Month + "-";
                 }
+                if (Day >= 10) {
+                    CurrentDate += Day;
+                }
+                else {
+                    CurrentDate += "0" + Day;
+                }
+                return CurrentDate;
             }
-            else
-                DateDiff2(document.getElementById("AllLeave1_LeaveBeginDate").value, document.getElementById("AllLeave1_LeaveEndDate").value, document.getElementById("AllLeave1_LeaveBeginTime").value, document.getElementById("AllLeave1_LeaveEndTime").value);
+        </script>
 
 
-            if (document.getElementById("AllLeave1_GoDate").value != "") {
-                if (new Date(document.getElementById("AllLeave1_LeaveBeginDate").value.replace("-", ",")).getTime() > new Date(document.getElementById("AllLeave1_GoDate").value.replace("-", ",")).getTime()
-                || (new Date(document.getElementById("AllLeave1_LeaveBeginDate").value.replace("-", ",")).getTime() == new Date(document.getElementById("AllLeave1_GoDate").value.replace("-", ",")).getTime()
-                        && document.getElementById("AllLeave1_GoTime").value < document.getElementById("AllLeave1_LeaveBeginTime").value)
-                    || new Date(document.getElementById("AllLeave1_GoDate").value.replace("-", ",")).getTime() > new Date(document.getElementById("AllLeave1_LeaveEndDate").value.replace("-", ",")).getTime()
-                    || (new Date(document.getElementById("AllLeave1_LeaveEndDate").value.replace("-", ",")).getTime() == new Date(document.getElementById("AllLeave1_GoDate").value.replace("-", ",")).getTime()
-                        && document.getElementById("AllLeave1_GoTime").value > document.getElementById("AllLeave1_LeaveEndTime").value)) {
-                    layer.alert('出发时间必须在请假时间内！');
-                    document.getElementById("AllLeave1_GoDate").value = "";
-                }
-            }
+    </div>
 
-            if (document.getElementById("AllLeave1_BackDate").value != "") {
-                if (document.getElementById("AllLeave1_GoDate").value > document.getElementById("AllLeave1_BackDate").value) {
-                    layer.alert('返回时间必须大于出发时间！');
-                    document.getElementById("AllLeave1_BackDate").value = "";
-                }
-                if (document.getElementById("AllLeave1_GoDate").value == document.getElementById("AllLeave1_BackDate").value
-                    && document.getElementById("AllLeave1_GoTime").value >= document.getElementById("AllLeave1_BackTime").value) {
-                    layer.alert('返回时间必须大于出发时间！');
-                    document.getElementById("AllLeave1_BackDate").value = "";
-                }
-                if (new Date(document.getElementById("AllLeave1_LeaveBeginDate").value.replace("-", ",")).getTime() > new Date(document.getElementById("AllLeave1_BackDate").value.replace("-", ",")).getTime()
-                    || (new Date(document.getElementById("AllLeave1_LeaveBeginDate").value.replace("-", ",")).getTime() == new Date(document.getElementById("AllLeave1_BackDate").value.replace("-", ",")).getTime()
-                        && document.getElementById("AllLeave1_BackTime").value < document.getElementById("AllLeave1_LeaveBeginTime").value)
-                    || new Date(document.getElementById("AllLeave1_BackDate").value.replace("-", ",")).getTime() > new Date(document.getElementById("AllLeave1_LeaveEndDate").value.replace("-", ",")).getTime()
-                    || (new Date(document.getElementById("AllLeave1_LeaveEndDate").value.replace("-", ",")).getTime() == new Date(document.getElementById("AllLeave1_BackDate").value.replace("-", ",")).getTime()
-                        && document.getElementById("AllLeave1_BackTime").value > document.getElementById("AllLeave1_LeaveEndTime").value)) {
-                    layer.alert('返程时间必须在请假时间内！');
-                    document.getElementById("AllLeave1_BackDate").value = "";
-                }
-            }
-        }
-    }
-
-    function DateDiff1(beginTime1, endTime1)   //计算天数的函数
-    {
-        var beginTime, endTime, iDays;
-        beginTime = parseInt(beginTime1);
-        endTime = parseInt(endTime1);
-
-        iDays = (parseFloat((endTime - beginTime))).toString();
-        document.getElementById("AllLeave1_LeaveHour").value = iDays;
-    }
-
-    function DateDiff2(beginDate, endDate, beginTime1, endTime1)   //计算天数的函数
-    {
-        //debugger;
-        //beginDate和endDate都是2007-8-10格式
-        var arrbeginDate, Date1, Date2, arrendDate, iDays, beginTime, endTime
-        beginTime = parseInt(beginTime1);
-        endTime = parseInt(endTime1)
-
-        arrbeginDate = beginDate.split("-")
-        Date1 = new Date(arrbeginDate[1] + '-' + arrbeginDate[2] + '-' + arrbeginDate[0] + ' ' + beginTime + ':' + document.getElementById("AllLeave1_LeaveBeginMinute").value + ':00')    //转换为2007-8-10格式
-        arrendDate = endDate.split("-")
-        Date2 = new Date(arrendDate[1] + '-' + arrendDate[2] + '-' + arrendDate[0] + ' ' + endTime + ':' + document.getElementById("AllLeave1_LeaveEndMinute").value + ':00')
-        const timeDifference = Math.abs(Date1.getTime() - Date2.getTime());
-
-        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-    
-        document.getElementById("AllLeave1_LeaveDay").value = parseInt(days);
-        /* }*/
-        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-
-        document.getElementById("AllLeave1_LeaveHour").value = hours;
-        document.getElementById("AllLeave1_LeaveMinute").value = minutes;
-    }
-
-    function getNowFormatDate() {
-        var day = new Date();
-
-        var Year = 0;
-        var Month = 0;
-        var Day = 0;
-        var CurrentDate = "";
-        //初始化时间   
-        Year = day.getFullYear();
-        Month = day.getMonth() + 1;
-        Day = day.getDate();
-
-        CurrentDate += Year + "-";
-
-        if (Month >= 10) {
-            CurrentDate += Month + "-";
-        }
-        else {
-            CurrentDate += "0" + Month + "-";
-        }
-        if (Day >= 10) {
-            CurrentDate += Day;
-        }
-        else {
-            CurrentDate += "0" + Day;
-        }
-        return CurrentDate;
-    }
-</script>
-
-
-        </div>
-    
-<script type="text/javascript">
-//<![CDATA[
-var Page_Validators =  new Array(document.getElementById("AllLeave1_RequiredFieldValidator1"), document.getElementById("AllLeave1_RequiredFieldValidator5"), document.getElementById("AllLeave1_RequiredFieldValidator3"), document.getElementById("AllLeave1_RequiredFieldValidatorlt"), document.getElementById("AllLeave1_RequiredFieldValidator2"), document.getElementById("AllLeave1_RequiredFieldValidator8"), document.getElementById("AllLeave1_RegularExpressionValidator1"), document.getElementById("AllLeave1_RequiredFieldValidator9"), document.getElementById("AllLeave1_RegularExpressionValidator2"), document.getElementById("AllLeave1_RequiredFieldValidator7"), document.getElementById("AllLeave1_RequiredFieldValidator10"), document.getElementById("AllLeave1_RequiredFieldValidator4"), document.getElementById("AllLeave1_RequiredFieldValidator6"), document.getElementById("AllLeave1_re"), document.getElementById("AllLeave1_RequiredFieldValidator15"), document.getElementById("AllLeave1_RegularExpressionValidator3"));
-//]]>
-</script>
-
-<script type="text/javascript">
-//<![CDATA[
-var AllLeave1_RequiredFieldValidator1 = document.all ? document.all["AllLeave1_RequiredFieldValidator1"] : document.getElementById("AllLeave1_RequiredFieldValidator1");
-AllLeave1_RequiredFieldValidator1.controltovalidate = "AllLeave1_LeaveBeginDate";
-AllLeave1_RequiredFieldValidator1.focusOnError = "t";
-AllLeave1_RequiredFieldValidator1.errormessage = "必填";
-AllLeave1_RequiredFieldValidator1.display = "Dynamic";
-AllLeave1_RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
-AllLeave1_RequiredFieldValidator1.initialvalue = "";
-var AllLeave1_RequiredFieldValidator5 = document.all ? document.all["AllLeave1_RequiredFieldValidator5"] : document.getElementById("AllLeave1_RequiredFieldValidator5");
-AllLeave1_RequiredFieldValidator5.controltovalidate = "AllLeave1_LeaveEndDate";
-AllLeave1_RequiredFieldValidator5.focusOnError = "t";
-AllLeave1_RequiredFieldValidator5.errormessage = "必填";
-AllLeave1_RequiredFieldValidator5.display = "Dynamic";
-AllLeave1_RequiredFieldValidator5.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
-AllLeave1_RequiredFieldValidator5.initialvalue = "";
-var AllLeave1_RequiredFieldValidator3 = document.all ? document.all["AllLeave1_RequiredFieldValidator3"] : document.getElementById("AllLeave1_RequiredFieldValidator3");
-AllLeave1_RequiredFieldValidator3.controltovalidate = "AllLeave1_LeaveType";
-AllLeave1_RequiredFieldValidator3.focusOnError = "t";
-AllLeave1_RequiredFieldValidator3.errormessage = "必填";
-AllLeave1_RequiredFieldValidator3.display = "Dynamic";
-AllLeave1_RequiredFieldValidator3.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
-AllLeave1_RequiredFieldValidator3.initialvalue = "";
-var AllLeave1_RequiredFieldValidatorlt = document.all ? document.all["AllLeave1_RequiredFieldValidatorlt"] : document.getElementById("AllLeave1_RequiredFieldValidatorlt");
-AllLeave1_RequiredFieldValidatorlt.controltovalidate = "AllLeave1_LeaveThing";
-AllLeave1_RequiredFieldValidatorlt.focusOnError = "t";
-AllLeave1_RequiredFieldValidatorlt.errormessage = "必填";
-AllLeave1_RequiredFieldValidatorlt.display = "Dynamic";
-AllLeave1_RequiredFieldValidatorlt.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
-AllLeave1_RequiredFieldValidatorlt.initialvalue = "";
-var AllLeave1_RequiredFieldValidator2 = document.all ? document.all["AllLeave1_RequiredFieldValidator2"] : document.getElementById("AllLeave1_RequiredFieldValidator2");
-AllLeave1_RequiredFieldValidator2.controltovalidate = "AllLeave1_OutAddress";
-AllLeave1_RequiredFieldValidator2.focusOnError = "t";
-AllLeave1_RequiredFieldValidator2.errormessage = "必填";
-AllLeave1_RequiredFieldValidator2.display = "Dynamic";
-AllLeave1_RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
-AllLeave1_RequiredFieldValidator2.initialvalue = "";
-var AllLeave1_RequiredFieldValidator8 = document.all ? document.all["AllLeave1_RequiredFieldValidator8"] : document.getElementById("AllLeave1_RequiredFieldValidator8");
-AllLeave1_RequiredFieldValidator8.controltovalidate = "AllLeave1_IfOut";
-AllLeave1_RequiredFieldValidator8.focusOnError = "t";
-AllLeave1_RequiredFieldValidator8.errormessage = "必填";
-AllLeave1_RequiredFieldValidator8.display = "Dynamic";
-AllLeave1_RequiredFieldValidator8.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
-AllLeave1_RequiredFieldValidator8.initialvalue = "";
-var AllLeave1_RegularExpressionValidator1 = document.all ? document.all["AllLeave1_RegularExpressionValidator1"] : document.getElementById("AllLeave1_RegularExpressionValidator1");
-AllLeave1_RegularExpressionValidator1.controltovalidate = "AllLeave1_OutTel";
-AllLeave1_RegularExpressionValidator1.focusOnError = "t";
-AllLeave1_RegularExpressionValidator1.errormessage = "格式：区号+号码";
-AllLeave1_RegularExpressionValidator1.display = "Dynamic";
-AllLeave1_RegularExpressionValidator1.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
-AllLeave1_RegularExpressionValidator1.validationexpression = "^\\d{3,4}-\\d{7,8}$";
-var AllLeave1_RequiredFieldValidator9 = document.all ? document.all["AllLeave1_RequiredFieldValidator9"] : document.getElementById("AllLeave1_RequiredFieldValidator9");
-AllLeave1_RequiredFieldValidator9.controltovalidate = "AllLeave1_OutMoveTel";
-AllLeave1_RequiredFieldValidator9.focusOnError = "t";
-AllLeave1_RequiredFieldValidator9.errormessage = "必填";
-AllLeave1_RequiredFieldValidator9.display = "Dynamic";
-AllLeave1_RequiredFieldValidator9.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
-AllLeave1_RequiredFieldValidator9.initialvalue = "";
-var AllLeave1_RegularExpressionValidator2 = document.all ? document.all["AllLeave1_RegularExpressionValidator2"] : document.getElementById("AllLeave1_RegularExpressionValidator2");
-AllLeave1_RegularExpressionValidator2.controltovalidate = "AllLeave1_OutMoveTel";
-AllLeave1_RegularExpressionValidator2.focusOnError = "t";
-AllLeave1_RegularExpressionValidator2.errormessage = "请输入以1开头的11位数字";
-AllLeave1_RegularExpressionValidator2.display = "Dynamic";
-AllLeave1_RegularExpressionValidator2.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
-AllLeave1_RegularExpressionValidator2.validationexpression = "^1\\d{10}$";
-var AllLeave1_RequiredFieldValidator7 = document.all ? document.all["AllLeave1_RequiredFieldValidator7"] : document.getElementById("AllLeave1_RequiredFieldValidator7");
-AllLeave1_RequiredFieldValidator7.controltovalidate = "AllLeave1_Relation";
-AllLeave1_RequiredFieldValidator7.focusOnError = "t";
-AllLeave1_RequiredFieldValidator7.errormessage = "必填";
-AllLeave1_RequiredFieldValidator7.display = "Dynamic";
-AllLeave1_RequiredFieldValidator7.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
-AllLeave1_RequiredFieldValidator7.initialvalue = "";
-var AllLeave1_RequiredFieldValidator10 = document.all ? document.all["AllLeave1_RequiredFieldValidator10"] : document.getElementById("AllLeave1_RequiredFieldValidator10");
-AllLeave1_RequiredFieldValidator10.controltovalidate = "AllLeave1_OutName";
-AllLeave1_RequiredFieldValidator10.focusOnError = "t";
-AllLeave1_RequiredFieldValidator10.errormessage = "必填";
-AllLeave1_RequiredFieldValidator10.display = "Dynamic";
-AllLeave1_RequiredFieldValidator10.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
-AllLeave1_RequiredFieldValidator10.initialvalue = "";
-var AllLeave1_RequiredFieldValidator4 = document.all ? document.all["AllLeave1_RequiredFieldValidator4"] : document.getElementById("AllLeave1_RequiredFieldValidator4");
-AllLeave1_RequiredFieldValidator4.controltovalidate = "AllLeave1_JHRName";
-AllLeave1_RequiredFieldValidator4.focusOnError = "t";
-AllLeave1_RequiredFieldValidator4.errormessage = "必填";
-AllLeave1_RequiredFieldValidator4.display = "Dynamic";
-AllLeave1_RequiredFieldValidator4.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
-AllLeave1_RequiredFieldValidator4.initialvalue = "";
-var AllLeave1_RequiredFieldValidator6 = document.all ? document.all["AllLeave1_RequiredFieldValidator6"] : document.getElementById("AllLeave1_RequiredFieldValidator6");
-AllLeave1_RequiredFieldValidator6.controltovalidate = "AllLeave1_JHRPhone";
-AllLeave1_RequiredFieldValidator6.focusOnError = "t";
-AllLeave1_RequiredFieldValidator6.errormessage = "必填";
-AllLeave1_RequiredFieldValidator6.display = "Dynamic";
-AllLeave1_RequiredFieldValidator6.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
-AllLeave1_RequiredFieldValidator6.initialvalue = "";
-var AllLeave1_re = document.all ? document.all["AllLeave1_re"] : document.getElementById("AllLeave1_re");
-AllLeave1_re.controltovalidate = "AllLeave1_JHRPhone";
-AllLeave1_re.focusOnError = "t";
-AllLeave1_re.errormessage = "手机号或座机号（区号-号码）";
-AllLeave1_re.display = "Dynamic";
-AllLeave1_re.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
-AllLeave1_re.validationexpression = "^1\\d{10}$|^\\d{3,4}-\\d{7,8}$";
-var AllLeave1_RequiredFieldValidator15 = document.all ? document.all["AllLeave1_RequiredFieldValidator15"] : document.getElementById("AllLeave1_RequiredFieldValidator15");
-AllLeave1_RequiredFieldValidator15.controltovalidate = "AllLeave1_StuMoveTel";
-AllLeave1_RequiredFieldValidator15.focusOnError = "t";
-AllLeave1_RequiredFieldValidator15.errormessage = "必填";
-AllLeave1_RequiredFieldValidator15.display = "Dynamic";
-AllLeave1_RequiredFieldValidator15.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
-AllLeave1_RequiredFieldValidator15.initialvalue = "";
-var AllLeave1_RegularExpressionValidator3 = document.all ? document.all["AllLeave1_RegularExpressionValidator3"] : document.getElementById("AllLeave1_RegularExpressionValidator3");
-AllLeave1_RegularExpressionValidator3.controltovalidate = "AllLeave1_StuMoveTel";
-AllLeave1_RegularExpressionValidator3.focusOnError = "t";
-AllLeave1_RegularExpressionValidator3.errormessage = "请输入以1开头的11位数字";
-AllLeave1_RegularExpressionValidator3.display = "Dynamic";
-AllLeave1_RegularExpressionValidator3.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
-AllLeave1_RegularExpressionValidator3.validationexpression = "^1\\d{10}$";
-//]]>
-</script>
-
-
-<script type="text/javascript">
-//<![CDATA[
-
-var Page_ValidationActive = false;
-if (typeof(ValidatorOnLoad) == "function") {
-    ValidatorOnLoad();
-}
-
-function ValidatorOnSubmit() {
-    if (Page_ValidationActive) {
-        return ValidatorCommonOnSubmit();
-    }
-    else {
-        return true;
-    }
-}
+    <script type="text/javascript">
+        //<![CDATA[
+        var Page_Validators = new Array(document.getElementById("AllLeave1_RequiredFieldValidator1"), document.getElementById("AllLeave1_RequiredFieldValidator5"), document.getElementById("AllLeave1_RequiredFieldValidator3"), document.getElementById("AllLeave1_RequiredFieldValidatorlt"), document.getElementById("AllLeave1_RequiredFieldValidator2"), document.getElementById("AllLeave1_RequiredFieldValidator8"), document.getElementById("AllLeave1_RegularExpressionValidator1"), document.getElementById("AllLeave1_RequiredFieldValidator9"), document.getElementById("AllLeave1_RegularExpressionValidator2"), document.getElementById("AllLeave1_RequiredFieldValidator7"), document.getElementById("AllLeave1_RequiredFieldValidator10"), document.getElementById("AllLeave1_RequiredFieldValidator4"), document.getElementById("AllLeave1_RequiredFieldValidator6"), document.getElementById("AllLeave1_re"), document.getElementById("AllLeave1_RequiredFieldValidator15"), document.getElementById("AllLeave1_RegularExpressionValidator3"));
         //]]>
-</script>
-</form>
+    </script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var AllLeave1_RequiredFieldValidator1 = document.all ? document.all["AllLeave1_RequiredFieldValidator1"] : document.getElementById("AllLeave1_RequiredFieldValidator1");
+        AllLeave1_RequiredFieldValidator1.controltovalidate = "AllLeave1_LeaveBeginDate";
+        AllLeave1_RequiredFieldValidator1.focusOnError = "t";
+        AllLeave1_RequiredFieldValidator1.errormessage = "必填";
+        AllLeave1_RequiredFieldValidator1.display = "Dynamic";
+        AllLeave1_RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+        AllLeave1_RequiredFieldValidator1.initialvalue = "";
+        var AllLeave1_RequiredFieldValidator5 = document.all ? document.all["AllLeave1_RequiredFieldValidator5"] : document.getElementById("AllLeave1_RequiredFieldValidator5");
+        AllLeave1_RequiredFieldValidator5.controltovalidate = "AllLeave1_LeaveEndDate";
+        AllLeave1_RequiredFieldValidator5.focusOnError = "t";
+        AllLeave1_RequiredFieldValidator5.errormessage = "必填";
+        AllLeave1_RequiredFieldValidator5.display = "Dynamic";
+        AllLeave1_RequiredFieldValidator5.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+        AllLeave1_RequiredFieldValidator5.initialvalue = "";
+        var AllLeave1_RequiredFieldValidator3 = document.all ? document.all["AllLeave1_RequiredFieldValidator3"] : document.getElementById("AllLeave1_RequiredFieldValidator3");
+        AllLeave1_RequiredFieldValidator3.controltovalidate = "AllLeave1_LeaveType";
+        AllLeave1_RequiredFieldValidator3.focusOnError = "t";
+        AllLeave1_RequiredFieldValidator3.errormessage = "必填";
+        AllLeave1_RequiredFieldValidator3.display = "Dynamic";
+        AllLeave1_RequiredFieldValidator3.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+        AllLeave1_RequiredFieldValidator3.initialvalue = "";
+        var AllLeave1_RequiredFieldValidatorlt = document.all ? document.all["AllLeave1_RequiredFieldValidatorlt"] : document.getElementById("AllLeave1_RequiredFieldValidatorlt");
+        AllLeave1_RequiredFieldValidatorlt.controltovalidate = "AllLeave1_LeaveThing";
+        AllLeave1_RequiredFieldValidatorlt.focusOnError = "t";
+        AllLeave1_RequiredFieldValidatorlt.errormessage = "必填";
+        AllLeave1_RequiredFieldValidatorlt.display = "Dynamic";
+        AllLeave1_RequiredFieldValidatorlt.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+        AllLeave1_RequiredFieldValidatorlt.initialvalue = "";
+        var AllLeave1_RequiredFieldValidator2 = document.all ? document.all["AllLeave1_RequiredFieldValidator2"] : document.getElementById("AllLeave1_RequiredFieldValidator2");
+        AllLeave1_RequiredFieldValidator2.controltovalidate = "AllLeave1_OutAddress";
+        AllLeave1_RequiredFieldValidator2.focusOnError = "t";
+        AllLeave1_RequiredFieldValidator2.errormessage = "必填";
+        AllLeave1_RequiredFieldValidator2.display = "Dynamic";
+        AllLeave1_RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+        AllLeave1_RequiredFieldValidator2.initialvalue = "";
+        var AllLeave1_RequiredFieldValidator8 = document.all ? document.all["AllLeave1_RequiredFieldValidator8"] : document.getElementById("AllLeave1_RequiredFieldValidator8");
+        AllLeave1_RequiredFieldValidator8.controltovalidate = "AllLeave1_IfOut";
+        AllLeave1_RequiredFieldValidator8.focusOnError = "t";
+        AllLeave1_RequiredFieldValidator8.errormessage = "必填";
+        AllLeave1_RequiredFieldValidator8.display = "Dynamic";
+        AllLeave1_RequiredFieldValidator8.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+        AllLeave1_RequiredFieldValidator8.initialvalue = "";
+        var AllLeave1_RegularExpressionValidator1 = document.all ? document.all["AllLeave1_RegularExpressionValidator1"] : document.getElementById("AllLeave1_RegularExpressionValidator1");
+        AllLeave1_RegularExpressionValidator1.controltovalidate = "AllLeave1_OutTel";
+        AllLeave1_RegularExpressionValidator1.focusOnError = "t";
+        AllLeave1_RegularExpressionValidator1.errormessage = "格式：区号+号码";
+        AllLeave1_RegularExpressionValidator1.display = "Dynamic";
+        AllLeave1_RegularExpressionValidator1.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+        AllLeave1_RegularExpressionValidator1.validationexpression = "^\\d{3,4}-\\d{7,8}$";
+        var AllLeave1_RequiredFieldValidator9 = document.all ? document.all["AllLeave1_RequiredFieldValidator9"] : document.getElementById("AllLeave1_RequiredFieldValidator9");
+        AllLeave1_RequiredFieldValidator9.controltovalidate = "AllLeave1_OutMoveTel";
+        AllLeave1_RequiredFieldValidator9.focusOnError = "t";
+        AllLeave1_RequiredFieldValidator9.errormessage = "必填";
+        AllLeave1_RequiredFieldValidator9.display = "Dynamic";
+        AllLeave1_RequiredFieldValidator9.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+        AllLeave1_RequiredFieldValidator9.initialvalue = "";
+        var AllLeave1_RegularExpressionValidator2 = document.all ? document.all["AllLeave1_RegularExpressionValidator2"] : document.getElementById("AllLeave1_RegularExpressionValidator2");
+        AllLeave1_RegularExpressionValidator2.controltovalidate = "AllLeave1_OutMoveTel";
+        AllLeave1_RegularExpressionValidator2.focusOnError = "t";
+        AllLeave1_RegularExpressionValidator2.errormessage = "请输入以1开头的11位数字";
+        AllLeave1_RegularExpressionValidator2.display = "Dynamic";
+        AllLeave1_RegularExpressionValidator2.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+        AllLeave1_RegularExpressionValidator2.validationexpression = "^1\\d{10}$";
+        var AllLeave1_RequiredFieldValidator7 = document.all ? document.all["AllLeave1_RequiredFieldValidator7"] : document.getElementById("AllLeave1_RequiredFieldValidator7");
+        AllLeave1_RequiredFieldValidator7.controltovalidate = "AllLeave1_Relation";
+        AllLeave1_RequiredFieldValidator7.focusOnError = "t";
+        AllLeave1_RequiredFieldValidator7.errormessage = "必填";
+        AllLeave1_RequiredFieldValidator7.display = "Dynamic";
+        AllLeave1_RequiredFieldValidator7.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+        AllLeave1_RequiredFieldValidator7.initialvalue = "";
+        var AllLeave1_RequiredFieldValidator10 = document.all ? document.all["AllLeave1_RequiredFieldValidator10"] : document.getElementById("AllLeave1_RequiredFieldValidator10");
+        AllLeave1_RequiredFieldValidator10.controltovalidate = "AllLeave1_OutName";
+        AllLeave1_RequiredFieldValidator10.focusOnError = "t";
+        AllLeave1_RequiredFieldValidator10.errormessage = "必填";
+        AllLeave1_RequiredFieldValidator10.display = "Dynamic";
+        AllLeave1_RequiredFieldValidator10.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+        AllLeave1_RequiredFieldValidator10.initialvalue = "";
+        var AllLeave1_RequiredFieldValidator4 = document.all ? document.all["AllLeave1_RequiredFieldValidator4"] : document.getElementById("AllLeave1_RequiredFieldValidator4");
+        AllLeave1_RequiredFieldValidator4.controltovalidate = "AllLeave1_JHRName";
+        AllLeave1_RequiredFieldValidator4.focusOnError = "t";
+        AllLeave1_RequiredFieldValidator4.errormessage = "必填";
+        AllLeave1_RequiredFieldValidator4.display = "Dynamic";
+        AllLeave1_RequiredFieldValidator4.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+        AllLeave1_RequiredFieldValidator4.initialvalue = "";
+        var AllLeave1_RequiredFieldValidator6 = document.all ? document.all["AllLeave1_RequiredFieldValidator6"] : document.getElementById("AllLeave1_RequiredFieldValidator6");
+        AllLeave1_RequiredFieldValidator6.controltovalidate = "AllLeave1_JHRPhone";
+        AllLeave1_RequiredFieldValidator6.focusOnError = "t";
+        AllLeave1_RequiredFieldValidator6.errormessage = "必填";
+        AllLeave1_RequiredFieldValidator6.display = "Dynamic";
+        AllLeave1_RequiredFieldValidator6.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+        AllLeave1_RequiredFieldValidator6.initialvalue = "";
+        var AllLeave1_re = document.all ? document.all["AllLeave1_re"] : document.getElementById("AllLeave1_re");
+        AllLeave1_re.controltovalidate = "AllLeave1_JHRPhone";
+        AllLeave1_re.focusOnError = "t";
+        AllLeave1_re.errormessage = "手机号或座机号（区号-号码）";
+        AllLeave1_re.display = "Dynamic";
+        AllLeave1_re.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+        AllLeave1_re.validationexpression = "^1\\d{10}$|^\\d{3,4}-\\d{7,8}$";
+        var AllLeave1_RequiredFieldValidator15 = document.all ? document.all["AllLeave1_RequiredFieldValidator15"] : document.getElementById("AllLeave1_RequiredFieldValidator15");
+        AllLeave1_RequiredFieldValidator15.controltovalidate = "AllLeave1_StuMoveTel";
+        AllLeave1_RequiredFieldValidator15.focusOnError = "t";
+        AllLeave1_RequiredFieldValidator15.errormessage = "必填";
+        AllLeave1_RequiredFieldValidator15.display = "Dynamic";
+        AllLeave1_RequiredFieldValidator15.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+        AllLeave1_RequiredFieldValidator15.initialvalue = "";
+        var AllLeave1_RegularExpressionValidator3 = document.all ? document.all["AllLeave1_RegularExpressionValidator3"] : document.getElementById("AllLeave1_RegularExpressionValidator3");
+        AllLeave1_RegularExpressionValidator3.controltovalidate = "AllLeave1_StuMoveTel";
+        AllLeave1_RegularExpressionValidator3.focusOnError = "t";
+        AllLeave1_RegularExpressionValidator3.errormessage = "请输入以1开头的11位数字";
+        AllLeave1_RegularExpressionValidator3.display = "Dynamic";
+        AllLeave1_RegularExpressionValidator3.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+        AllLeave1_RegularExpressionValidator3.validationexpression = "^1\\d{10}$";
+        //]]>
+    </script>
+
+
+    <script type="text/javascript">
+        //<![CDATA[
+
+        var Page_ValidationActive = false;
+        if (typeof (ValidatorOnLoad) == "function") {
+            ValidatorOnLoad();
+        }
+
+        function ValidatorOnSubmit() {
+            if (Page_ValidationActive) {
+                return ValidatorCommonOnSubmit();
+            }
+            else {
+                return true;
+            }
+        }
+        //]]>
+    </script>
+    </form>
 </body>
+
 </html>
