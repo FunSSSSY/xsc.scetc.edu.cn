@@ -444,7 +444,7 @@ td div > .DivTable.form-table {
 
 .DivTable .EdtTitleBack /*二级界面表格td标题*/ {
     background-color: translate;
-    background-image: url('../images/leavebackImage.png');
+    background-image: url('../leavebackImage.png');
     text-align: right;
     height: 32px;
     /*overflow:hidden;*/
