@@ -1,0 +1,22 @@
+body 
+{
+    margin-top: 0px; 
+    margin-right: 0px;
+     margin-bottom: 0px; 
+     margin-left: 0px;
+  SCROLLBAR-FACE-COLOR: #0d93d9; 
+  SCROLLBAR-HIGHLIGHT-COLOR:#EDF4FD; 
+  SCROLLBAR-SHADOW-COLOR: #EDF4FD; 
+  SCROLLBAR-3DLIGHT-COLOR: #0d93d9; 
+  SCROLLBAR-ARROW-COLOR: #EDF4FD; 
+  SCROLLBAR-TRACK-COLOR: #EDF4FD; 
+  SCROLLBAR-DARKSHADOW-COLOR: #0d93d9;
+  font-size:9pt;
+  font-family:"����";
+}
+
+a:link {font-family: "����";font-size: 12px;color: #303030;text-decoration: none;}
+a:visited {	font-family: "����";font-size: 12px;color: #303030;text-decoration: none;}
+a:hover {font-family: "����";font-size: 12px;color: #660000;}
+a:active {font-family: "����";font-size: 12px;color: #303030;text-decoration: none;}
+	
