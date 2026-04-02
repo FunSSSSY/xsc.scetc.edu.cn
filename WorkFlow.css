@@ -1,0 +1,74 @@
+ /*批量审核*/
+            #wf_error {
+                width: 98%;
+                margin: 0 auto;
+                margin-top: 10px;
+            }
+
+                #wf_error .error_list {
+                    display:block;
+                    width: 98%;
+                    margin: 0 auto;
+                    margin-top: 0px;
+                    margin-bottom: 10px;
+                    /*border: 1px solid #ddd;*/
+                    padding: 5px 10px;
+                    box-sizing: border-box;
+                }
+
+                    #wf_error .error_list ul li {
+                        border-bottom: 1px dotted #ddd;
+                        line-height: 22px;
+                        text-align: left;
+                        padding-left: 10px;
+                        list-style: disc inside;
+                        width: 96%;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+
+                        /*#wf_error .error_list ul li:first-child {
+                            border-top: none;
+                        }*/
+
+                        /*单个审核*/
+                        .status span{
+        display:inline-block;
+        padding:5px 8px;
+    }
+    .status span span{
+        color:#ddd; display:inline-block;
+        padding:5px 8px;
+        box-sizing:border-box;
+        color:#fff;
+        background-color:#ddd;
+        border-radius:4px;
+
+
+    }  /*默认未执行流程时颜色*/
+    .status .sta_color1{background-color:#9c9c9c} /*开始流程时颜色1、9*/
+    .status .sta_color2{background-color:#1ab394} /*通过时颜色3*/
+    .status .sta_color3{background-color:#ff0000} /*拒绝颜色7*/
+    .status .sta_color4{background-color:#f8ac59} /*打回颜色5*/
+    
+    .workflow{
+        padding:3px 2px;
+        display:block;
+    }
+    .get_more{
+      display:block;
+      text-align:center;
+      width:60px;
+      margin:0 auto;
+       padding:2px 10px;
+        box-sizing:border-box;
+        color:#fff;
+        background-color:#1ab394;
+        border-radius:4px;
+        margin-top:5px;
+    }
+    .set_row>div,.info_more>div{
+        line-height:22px;
+        border-bottom: 1px #ddd dotted;
+    }
