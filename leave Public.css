@@ -1,0 +1,1102 @@
+@import url(../font/font-awesome.min.css);
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: "宋体";
+}
+
+td {
+    font-size: 10pt;
+}
+
+a:link {
+    font-family: "宋体";
+    font-size: 12px;
+    color: #5f5f5f;
+    text-decoration: none;
+}
+
+a:visited {
+    font-family: "宋体";
+    font-size: 12px;
+    color: #5f5f5f;
+    text-decoration: none;
+}
+
+a:hover {
+    font-family: "宋体";
+    font-size: 12px;
+    color: #b61e05;
+    text-decoration: none;
+}
+
+a:active {
+    font-family: "宋体";
+    font-size: 12px;
+    color: #5f5f5f;
+    text-decoration: none;
+}
+/*样式判定补充*/
+.t-left {
+    text-align: left !important;
+}
+
+.t-right {
+    text-align: right !important;
+}
+
+.pad5 {
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.documentBody {
+    margin: 10px 0 10px 0;
+}
+
+.DivMenu + .documentBody {
+    margin: 45px 0 10px 0;
+}
+
+.TdBlack + .documentBody {
+    margin: 0px 0 10px 0;
+}
+/*样式判定补充-end*/
+.ListBox {
+    overflow: hidden;
+    border: 0;
+}
+
+.ListBoxDiv {
+    overflow: scroll;
+    width: 644px;
+    height: 118px;
+    border: #d7d7d7 1px solid;
+}
+
+.ListBoxDiv1 {
+    overflow: scroll;
+    width: 589px;
+    height: 118px;
+    border: #d7d7d7 1px solid;
+}
+
+.normal_botton {
+    border: #5a646d 1px solid;
+    background-color: #f9f9f9;
+    padding: 2px 6px;
+}
+
+.layui-layer-btn a:hover {
+    font-size: 12px;
+}
+
+a.LinkGay:link {
+    font-family: "宋体";
+    font-size: 12px;
+    color: #333333;
+    text-decoration: none;
+}
+
+a.LinkGay:visited {
+    font-family: "宋体";
+    font-size: 12px;
+    color: #333333;
+    text-decoration: none;
+}
+
+a.LinkGay:hover {
+    font-family: "宋体";
+    font-size: 12px;
+    color: #0677bb;
+    text-decoration: none;
+}
+
+a.LinkGay:active {
+    font-family: "宋体";
+    font-size: 12px;
+    color: #333333;
+    text-decoration: none;
+}
+
+a.Red:link {
+    font-family: "宋体";
+    font-size: 12px;
+    color: red;
+    text-decoration: none;
+}
+
+a.Red:visited {
+    font-family: "宋体";
+    font-size: 12px;
+    color: red;
+    text-decoration: none;
+}
+
+a.Red:hover {
+    font-family: "宋体";
+    font-size: 12px;
+    color: #2b5c2e;
+    text-decoration: none;
+}
+
+a.Red:active {
+    font-family: "宋体";
+    font-size: 12px;
+    color: red;
+    text-decoration: none;
+}
+
+.treeview_select {
+    background-color: #5c9bdc;
+    color: #fff !important;
+    padding: 0 2px;
+}
+
+    .treeview_select:hover {
+        background-color: #2170BB;
+    }
+/*-----------------------------*/
+
+.DivMenu {
+    /*--------------------菜单对应的table样式-----may添加-------*/
+    width: 100%;
+    height: 31px;
+    border-bottom: #d7d7d7 solid 1px;
+    line-height: 30px;
+    /* margin: 5px auto 0 auto; */
+    padding: 5px 0 3px 25px;
+    text-align: left;
+    background-color: #fff;
+    position: fixed;
+    z-index: 1000;
+    box-sizing: content-box;
+    top: 0;
+}
+
+    .DivMenu i {
+        padding: 0 5px 0 0;
+    }
+
+    .DivMenu a {
+        border: 1px solid #5c9bdc;
+        padding: 5px 15px;
+        border-radius: 3px;
+        background-color: #5c9bdc;
+        color: #fff;
+        margin: 0 10px 0 0;
+    }
+
+.EditInfoHisoryBtn {
+    border: 1px solid #5c9bdc;
+    padding: 5px 15px;
+    border-radius: 3px;
+    background-color: #5c9bdc;
+    color: #fff;
+    margin: 0 10px 0 0;
+}
+
+.DivMenu a:link {
+    font-family: "宋体";
+    font-size: 13px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.DivMenu a:visited {
+    font-family: "宋体";
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.DivMenu a:hover {
+    font-family: "宋体";
+    font-size: 13px;
+    background-color: #2170bb;
+    border-color: #2170bb;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.DivMenu a:active {
+    font-family: "宋体";
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 15px;
+}
+
+.DivMenu btn:link {
+    font-family: "宋体";
+    font-size: 13px;
+    color: #5a646d;
+    text-decoration: none;
+}
+
+.DivMenu btn:visited {
+    font-family: "宋体";
+    font-size: 12px;
+    color: #5a646d;
+    text-decoration: none;
+}
+
+.DivMenu btn:hover {
+    font-family: "宋体";
+    font-size: 13px;
+    color: #4aa0d9;
+    text-decoration: none;
+}
+
+.DivMenu btn:active {
+    font-family: "宋体";
+    font-size: 12px;
+    color: #5a646d;
+    text-decoration: none;
+}
+
+
+.SearchTitle /*查询搜索标题*/ {
+    width: 97.2%; /*防止单数行少1px计算*/
+    line-height: 28px;
+    margin: 0 auto;
+    border: 0;
+    background-color: #F6F6F6;
+    height: 28px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.SearchDiv /*查询内容条*/ {
+    width: 97.2%; /*防止单数行少1px计算*/
+    /*overflow:hidden;*/
+    margin: 8px auto;
+    text-align: left;
+    line-height: 26px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px dotted #ddd;
+}
+
+    .SearchDiv #BtnSearch {
+        margin: 2px 0 0 0;
+        height: 24px;
+        box-sizing: border-box;
+        line-height: 16px;
+    }
+
+.DivMain /*主体界面表格*/ {
+    width: 97.2%;
+    margin: 0 auto;
+    /*overflow:hidden;*/
+    /*border:#bdc8d3 solid 1px;*/
+    margin-top: -1px;
+    box-sizing: border-box;
+}
+
+.documentBody > .DivMain {
+    margin-top: 15px;
+}
+
+.documentBody > .DivTable {
+    /*margin-top: 15px;*/
+}
+
+.DivCaption /*主体界面标题*/ {
+    width: 100%;
+    height: 34px;
+    border: #bdc8d3 solid 1px;
+    background-color: #ecf2f8;
+    color: #264766;
+    font-family: "宋体";
+    font-weight: bold;
+    line-height: 32px;
+    box-sizing: border-box;
+    margin-bottom: 0px;
+}
+
+.DGNotice1 {
+    font-weight: normal;
+    line-height: 20px;
+}
+
+.DivTitle /*二级界面标题*/ {
+    width: 97.2%;
+    margin: 0 auto;
+    line-height: 32px;
+    text-align: left;
+    color: #264766;
+    font-family: "宋体";
+    font-weight: bold;
+}
+
+.DivTabImg {
+    width: 97%;
+    margin: 0 auto;
+    line-height: 26px;
+    text-align: left;
+    color: #264766;
+    font-family: "宋体";
+    font-weight: bold;
+    border: 1px red solid;
+}
+
+    .DivTabImg IMG {
+        height: 100%;
+        margin: 0 auto;
+        height: 100%
+    }
+
+
+.DivTable
+/*二级界面表格*/ {
+    /*background-color: #bdc8d3;*/
+    width: 97.2%;
+    margin: 0 auto;
+    margin-top: -1px;
+}
+
+    .DivTable.form-table {
+        border-collapse: collapse;
+        border-spacing: 0px;
+        border-style: solid solid solid solid;
+        border-width: 1px;
+        border-color: #bdc8d3;
+        margin-top: -1px;
+    }
+
+td div > .DivTable.form-table {
+    border-style: none;
+}
+
+.DivTable .DivTable.form-table {
+    border-style: solid solid solid solid;
+}
+
+.DivTable.form-table table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+
+.DivTable.form-table tr:hover {
+    background-color: #DFECFA !important;
+    cursor: pointer;
+}
+
+    .DivTable.form-table tr:hover td {
+        background: none;
+    }
+
+.DivTable.form-table tr:first-child:hover {
+    background-color: transparent !important;
+    cursor: pointer;
+}
+
+.DivTable.form-table tr:hover td {
+    background: none;
+}
+
+
+.DivTable.form-table td {
+    margin: 0px;
+    padding: 0px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-style: solid none none solid;
+    border-width: 1px;
+    border-color: #bdc8d3;
+}
+
+    .DivTable.form-table td i {
+        vertical-align: middle
+    }
+
+    .DivTable.form-table td:first-child {
+        border-style: solid none none none;
+    }
+
+.DivTable.form-table table tr:first-child td {
+    border-top-style: none;
+}
+
+.DivTable.form-table table tr td:first-child {
+    border-left-style: none;
+}
+
+.DivTable tr /*二级界面表格tr*/ {
+    min-height: 32px;
+    border: 1px solid #bdc8d3;
+}
+
+.DivTable td /*二级界面表格td*/ {
+    min-height: 28px;
+    border: 1px solid #bdc8d3;
+}
+
+.DivTable .EdtTitleBack /*二级界面表格td标题*/ {
+    background-color: translate;
+    background-image: url('../images/leavebackImage.png');
+    text-align: right;
+    height: 32px;
+    /*overflow:hidden;*/
+}
+
+.DivTable .EdtBack /*二级界面表格td录入*/ {
+    /*background-color: #fff;*/
+    text-align: left;
+    height: 32px;
+    /*overflow:hidden;*/
+}
+
+.DivTable .TitleTd /*二级界面表格分类标题*/ {
+    background-color: #f2f1f1;
+    height: 30px;
+    font-family: "宋体";
+    font-weight: bold;
+}
+
+.DivExam /*做审批用的div*/ {
+    background-color: #f2f1f1;
+    height: 38px;
+    line-height: 38px;
+    text-align: right;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: -1px;
+}
+
+.richbox {
+    min-height: 440px;
+}
+
+#TPagedInfo1 {
+    font-weight: normal;
+    line-height: 20px;
+}
+/*-------------------------以下为旧的样式*/
+.MenuDiv {
+    width: 100%;
+    height: 24px;
+    border-bottom: #d7d7d7 solid 1px;
+    line-height: 22px;
+    margin: 7px 0 0 0;
+}
+
+    .MenuDiv a:link {
+        font-family: "宋体";
+        font-size: 13px;
+        color: #5a646d;
+        text-decoration: none;
+    }
+
+    .MenuDiv a:visited {
+        font-family: "宋体";
+        font-size: 12px;
+        color: #5a646d;
+        text-decoration: none;
+    }
+
+    .MenuDiv a:hover {
+        font-family: "宋体";
+        font-size: 13px;
+        color: #b61e05;
+        text-decoration: none;
+    }
+
+    .MenuDiv a:active {
+        font-family: "宋体";
+        font-size: 12px;
+        color: #5a646d;
+        text-decoration: none;
+    }
+
+.warn1 {
+    clear: both;
+    color: red;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.warn2 {
+    clear: both;
+    color: red;
+    font-family: Arial;
+    font-size: 22px;
+}
+
+/*表格底色，也就是表格线条色*/
+.TdBlack {
+    background-color: #f9f9f9;
+    border-bottom: #d1d2d1 solid 1px;
+    height: 30px;
+}
+
+.TableBlack {
+    background-color: #bdc8d3;
+    /*margin-top:-1px;*/
+}
+
+.TitleBack {
+    background-color: #ecf2f8;
+}
+
+.TableBlack td {
+    height: 34px;
+    /*overflow:hidden;*/
+    /*line-height: 34px;*/
+    vertical-align: middle;
+}
+
+/*标题字体及颜色*/
+.TitleText {
+    color: #264766;
+    font-family: "宋体";
+    font-weight: bold;
+    height: 36px;
+    overflow: hidden;
+    line-height: 26px;
+}
+/*操作表格底色*/
+.EdtTbBack {
+    background-color: #fbfafa;
+}
+/*操作表格标题底色及文字*/
+.EdtTitleTbBack {
+    background-color: #f4f2f2;
+    height: 30px;
+    font-family: "宋体";
+    font-weight: bold;
+}
+/*操作表格标题底色及文字*/
+.EdtTitleTbBack1 {
+    background-color: #f4f2f2;
+    height: 30px;
+}
+
+.OrderPanel {
+    width: 100%;
+    height: 30px;
+    font-family: "宋体";
+    line-height: 30px;
+}
+
+.GrdCSS {
+    background-color: #f0eeef;
+    overflow: hidden;
+}
+
+    .GrdCSS tr {
+        overflow: hidden;
+    }
+
+        .GrdCSS tr td {
+            min-height: 26px;
+            line-height: 26px;
+            overflow: hidden;
+            border: solid 1px #e1e1e1;
+        }
+
+        .GrdCSS tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+/*手势*/
+
+.pointer {
+    cursor: pointer;
+}
+
+.SearchTitle i {
+    display: inline-block !important;
+}
+
+.SearchTitle .rotate {
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    /* IE 9 */
+    -moz-transform: rotate(180deg);
+    /* Firefox */
+    -webkit-transform: rotate(180deg);
+    /* Safari 和 Chrome */
+    -o-transform: rotate(180deg);
+    /* Opera */
+}
+
+/*---------------------------------------------------------添加按钮样式---------------------------------------------------------*/
+
+.input_button {
+    margin: 2px 0 0 0;
+    height: 24px;
+}
+
+select,
+input[type="text"] {
+    height: 24px;
+    border: 1px solid #ddd;
+    color: #333;
+    font-size: 12px;
+    /*text-indent: 3px;*/
+    /* min-width: 80px; */
+    box-sizing: border-box;
+    padding: 0 3px;
+}
+
+.SearchDiv select,
+.SearchDiv input[type="text"] {
+    margin: 0 10px 3px 0 !important;
+}
+
+table select,
+table input[type="text"] {
+    margin: 0 !important;
+}
+
+.EdtBack textarea {
+    margin: 3px 0;
+}
+
+textarea {
+    border: 1px solid #ddd;
+    color: #333;
+    font-size: 12px;
+    padding: 5px;
+    box-sizing: border-box;
+    line-height: 18px;
+}
+
+input[type="checkbox"] {
+    border: 1px solid #ddd;
+    margin: 0 4px;
+    width: 14px;
+    height: 14px;
+    vertical-align: sub;
+}
+
+
+/*导入页面*/
+
+.import-box {
+    padding: 30px 20px;
+}
+
+    .import-box .TableBlack table {
+        margin-top: -1px;
+    }
+
+
+/*行内input样式*/
+
+.EdtBack input[type="button"],
+.EdtBack input[type="submit"] {
+    background-color: #5c9bdc;
+    border-color: #5c9bdc;
+    color: #FFF !important;
+    text-decoration: none;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+    .EdtBack input[type="button"]:hover,
+    .EdtBack input[type="submit"]:hover {
+        background-color: #2170bb;
+        border-color: #2170bb;
+    }
+
+.downbox .upload-btn {
+    line-height: 24px !important;
+    /*上传插件样式补充*/
+}
+
+
+/*行内按钮*/
+
+.DivExam input[type="button"],
+.DivExam input[type="submit"],
+DivCaption input[type="submit"],
+.TableBlack input[type="submit"],
+.TableBlack input[type="button"],
+.DivMain input[type="button"],
+.button_public,
+input[name="BtnOK"],
+.button_return {
+    background-color: #5c9bdc;
+    border-color: #5c9bdc;
+    color: #FFF !important;
+    text-decoration: none;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 0 2px;
+}
+
+input[name="BtnOK"] {
+    min-width: 66px;
+}
+
+    .DivExam input[type="button"]:hover,
+    .DivExam input[type="submit"]:hover,
+    DivCaption input[type="submit"]:hover,
+    .TableBlack input[type="submit"]:hover,
+    .TableBlack input[type="button"]:hover,
+    .DivMain input[type="button"]:hover,
+    .button_public:hover,
+    input[name="BtnOK"]:hover,
+    .button_return:hover {
+        background-color: #2170bb;
+        border-color: #2170bb;
+    }
+
+.DivMain input[type="submit"],
+.DivMain input[type="button"] {
+    border-style: none;
+    border-width: medium;
+    background-color: #5c9bdc;
+    border-color: inherit;
+    color: #FFF;
+    text-decoration: none;
+    padding: 3px 5px;
+    border-radius: 2px;
+    font-size: 10px;
+    cursor: pointer;
+    margin: 0 2px;
+    height: 22px;
+}
+
+    .DivMain input[type="submit"]:hover,
+    .DivMain input[type="button"]:hover {
+        background-color: #2170bb;
+        border-color: #2170bb;
+    }
+
+.EdtBack input[type="text"]:disabled,
+.EdtBack textarea:disabled,
+.SearchDiv input[type="text"]:disabled,
+.EdtBack select:disabled {
+    background-color: #f2f1f1;
+    border: 1px solid #ddd;
+    color: #9c9c9c;
+    /*border: none;*/
+}
+
+.EdtBack input[type="button"]:disabled,
+.TableBlack input[type="submit"]:disabled,
+.TableBlack input[type="button"]:disabled,
+.EdtBack input[type="submit"]:disabled {
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    color: #FFF;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.DivMain input[type="submit"]:disabled,
+.DivMain input[type="button"]:disabled {
+    background-color: #c2c2c2;
+    border-color: #c2c2c2;
+}
+
+.button_public a:hover,
+.button_return a:hover,
+.button_public:hover {
+    font-size: 12px !important;
+    color: #fff !important;
+}
+
+.button_public a:visited,
+.button_return a:visited,
+.button_public:visited,
+.button_return:visited {
+    font-size: 12px !important;
+    color: #fff !important;
+}
+
+
+/*翻页*/
+
+.input_button,
+input[name="BtnSearch"],
+input[name="TPaged1$Fistpage"],
+input[name="TPaged1$Prevpage"],
+input[name="TPaged1$Nextpage"],
+input[name="TPaged1$Lastpage"],
+input[name="TPaged1$Jump"] {
+    font-family: "宋体";
+    font-size: 13px;
+    background-color: #5c9bdc;
+    border-color: #5c9bdc;
+    color: #FFF;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+input[name="BtnSearch"] {
+    /*height:24px;
+    line-height:24px;
+    box-sizing:border-box;*/
+}
+
+    .input_button:hover,
+    input[name="BtnSearch"]:hover,
+    input[name="TPaged1$Fistpage"]:hover,
+    input[name="TPaged1$Prevpage"]:hover,
+    input[name="TPaged1$Nextpage"]:hover,
+    input[name="TPaged1$Lastpage"]:hover,
+    input[name="TPaged1$Jump"]:hover {
+        background-color: #2170bb;
+        border-color: #2170bb;
+        color: #FFF;
+        text-decoration: none;
+    }
+
+    .input_button:disabled,
+    input[name="BtnSearch"]:disabled,
+    input[name="TPaged1$Fistpage"]:disabled,
+    input[name="TPaged1$Prevpage"]:disabled,
+    input[name="TPaged1$Nextpage"]:disabled,
+    input[name="TPaged1$Lastpage"]:disabled,
+    input[name="TPaged1$Jump"]:disabled {
+        font-family: "宋体";
+        font-size: 13px;
+        background-color: #c2c2c2;
+        border-color: #c2c2c2;
+        color: #FFF;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        border-radius: 2px;
+    }
+
+input[name="TPaged1$Fistpage"],
+input[name="TPaged1$Prevpage"],
+input[name="TPaged1$Nextpage"],
+input[name="TPaged1$Lastpage"],
+input[name="TPaged1$Jump"] {
+    font-size: 10px !important;
+    padding: 3px 8px;
+}
+
+.pageno input[type="submit"],
+.SearchDiv input[type="submit"] {
+    font-family: "宋体";
+    font-size: 13px;
+    background-color: #5c9bdc;
+    border-color: #5c9bdc;
+    color: #FFF;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+    .pageno input[type="submit"]:hover,
+    .SearchDiv input[type="submit"]:hover {
+        background-color: #2170bb;
+        border-color: #2170bb;
+        color: #FFF;
+        text-decoration: none;
+    }
+
+.pageno input[type="submit"] {
+    font-size: 10px !important;
+    padding: 3px 8px;
+}
+
+.SearchDiv input[type="submit"] {
+    /* font-size: 10px !important; */
+    padding: 5px 10px;
+}
+
+.pageno input[type="submit"]:disabled,
+SearchDiv input[type="submit"]:disabled {
+    background-color: #c2c2c2;
+    border-color: #c2c2c2;
+}
+
+
+/*二层table 表中表样式-begin*/
+.Table-content {
+    position: relative;
+    padding: 2px;
+}
+
+.Tablelist {
+    width: 100%;
+    background-color: #fff;
+}
+
+    .Tablelist .hidden {
+        display: none;
+    }
+
+    .Tablelist .t-left {
+        text-align: left;
+    }
+
+    .Tablelist .operation .font18 {
+        font-size: 18px;
+    }
+
+    .Tablelist .operation a {
+        font-size: 16px;
+        margin: 0 5px;
+    }
+
+    .Tablelist .operation i.icon-edit {
+        vertical-align: middle;
+    }
+
+    .Tablelist th {
+        background-color: #EFEFEF;
+        height: 40px;
+        font-size: 13px;
+        color: #3c3c3c;
+        font-weight: normal;
+        border-style: solid none solid solid;
+        border-width: 1px;
+        border-color: #bdc8d3;
+        padding: 8px;
+        vertical-align: middle;
+        box-sizing: border-box;
+    }
+
+.Tablelist {
+    border-collapse: collapse;
+    border-spacing: 0px;
+    border-style: solid solid solid solid;
+    border-width: 1px;
+    border-color: #bdc8d3;
+    margin-top: -1px;
+}
+
+    .Tablelist table {
+        border-collapse: collapse;
+        border-spacing: 0px;
+    }
+
+    .Tablelist td {
+        margin: 0px;
+        padding: 0px;
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        border-style: solid none none solid;
+        border-width: 1px;
+        border-color: #bdc8d3;
+        line-height: 32px;
+        vertical-align: middle;
+        box-sizing: border-box;
+    }
+
+    .Tablelist > tbody > tr:nth-of-type(even) {
+        background-color: #f9f9f9;
+    }
+
+.dataTables_filter {
+    width: 50%;
+    float: right;
+    text-align: right;
+    margin: 5px 0 5px 0;
+}
+
+    .dataTables_filter input {
+        height: 24px;
+        border: 1px solid #ddd;
+        color: #333;
+        font-size: 12px;
+        box-sizing: border-box;
+        padding: 0 3px;
+    }
+
+.Add_content {
+    position: absolute;
+    top: 5px;
+}
+
+.Tablelist tbody tr:first-child .set_up {
+    visibility: hidden;
+}
+
+.Tablelist tbody tr:last-child .set_down {
+    visibility: hidden;
+}
+
+/*二层table 表中表样式-end*/
+/*翻页样式-老板版本补充*/
+.PageStyle td {
+    width: 80px;
+    background-color: #fff;
+}
+
+    .PageStyle td a {
+        text-decoration: none;
+    }
+    /*.DivTable.form-table tr:last-child:hover {
+    background-color: #fff !important;
+    cursor: pointer;
+}*/
+    .PageStyle td table tr:hover {
+        background-color: #fff !important
+    }
+
+    .PageStyle td table tr td:hover {
+        background-color: #DFECFA !important;
+    }
+
+    .PageStyle td table tr td span {
+        color: #2170bb;
+    }
+
+#odiv table {
+    width: 98%;
+    overflow: hidden;
+    margin: 8px auto;
+    text-align: left;
+    line-height: 26px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px dotted #ddd;
+}
+
+    #odiv table tr {
+        height: 28px;
+        line-height: 26px;
+    }
+
+        #odiv table tr td {
+            background-color: #f9f9f9
+        }
+
+            #odiv table tr td #BtnSearch {
+                height: 24px;
+            }
+/*翻页样式-老板版本补充-end*/
+/*GridView layer 删除确认*/
+.LayerConfirm {
+    display: none;
+}
+
+
+.JTGJ td{
+    border-width:0px;
+}
